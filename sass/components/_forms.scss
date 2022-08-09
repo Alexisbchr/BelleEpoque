@@ -1,0 +1,125 @@
+////////////////// FORMULAIRE //////////////////
+
+.formulaire {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+form {
+  width: 65%;
+
+  font-family: "Montserrat", sans-serif;
+}
+// STYLE TOOLBAR //
+.toolbar {
+  text-align: center;
+}
+
+// STYLE FIELDSET //
+fieldset {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 1px solid;
+  border-radius: 0.5em;
+}
+
+legend {
+  padding: 0 1em;
+
+  text-transform: uppercase;
+}
+
+// STYLE FIELD //
+.field {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.field label {
+  width: 30%;
+}
+
+.field .value {
+  width: 80%;
+  margin-right: 3%;
+}
+
+.field input {
+  width: 100%;
+}
+// STYLE FIELD FOCUS //
+input:focus {
+  outline: none !important;
+  border-bottom: 20px solid;
+  border-color: $white;
+}
+textarea:focus {
+  outline: none !important;
+  border-bottom: 4px solid;
+  border-color: $white;
+}
+
+// STYLE LABEL //
+label {
+  padding: 0;
+}
+// STYLE INPUT //
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type*="date"],
+select,
+object,
+textarea {
+  display: inline-block;
+  margin: 0.5em 0;
+  padding: 0.3em;
+  border: 0;
+  border-bottom: 1px solid #e9e9e9;
+  background-color: rgba(255, 255, 255, 0);
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type*="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  border-bottom: 3px solid #E9E9E9;
+}
+object > option:focus {
+  outline: none !important;
+  border-bottom: 3px solid;
+  background-color: rgba(255, 255, 255, 0);
+}
+select,
+textarea {
+  width: 100%;
+}
+textarea {
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+  min-height: 10em;
+}
+#query {
+  resize: vertical;
+}
+/*////////////////// AUTOCOMPLETE //////////////////*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 3px solid #e9e9e9;
+  -webkit-text-fill-color: #e9e9e9;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

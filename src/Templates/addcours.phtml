@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Belle-Epoque ~ Ajouter un cours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+      <?php if(!empty($currentUser))
+      {
+      ?>
+        <header class="header">
+          <div class="header__logo">
+              <p class="logo">Belle Époque</p>
+          </div>
+          
+          <div class="header__menu">
+              <ul class="header__menu--list">
+                  <li class="header__menu--items">
+                      <a href="?route=landing">Accueil</a>
+                  </li>
+                  <li class="header__menu--items">
+                      <a href="?route=addcours">Gérer les cours</a>
+                  </li>
+                  <li class="header__menu--items">
+                      <a href="#">Gérer le calendrier</a>
+                  </li>
+              </ul>
+          </div>
+        </header>
+        <main class="adm__container">
+           <section class="adm__container__section--first">
+              <div class="adm__section__first--masque">
+                 <form action="./index.php?route=addcours" method="post">
+                    <fieldset>
+                       <legend>Ajouter un cour</legend>
+                       <div class="field">
+                          <label for="title">Titre</label>
+                          <div class="value">
+                             <input type="text" name="titreCour">
+                          </div>
+                       </div>
+                       <div class="field">
+                          <label for="compte">Compte</label>
+                          <div class="value">
+                             <input type="text" name="compteCour">
+                          </div>
+                       </div>
+                       <div class="field">
+                          <label for="mur">Mur</label>
+                          <div class="value">
+                             <input type="text" name="murCour">
+                          </div>
+                       </div>
+                       <div class="field">
+                          <label for="niveau">Niveau</label>
+                          <div class="value">
+                             <input type="text" name="niveauCour">
+                          </div>
+                       </div>
+                       <div class="field">
+                          <label for="choregraphe">Choregraphe</label>
+                          <div class="value">
+                             <input type="text" name="choregrapheCour">
+                          </div>
+                       </div>
+                       <div class="field">
+                          <label for="musique">Musique</label>
+                          <div class="value">
+                             <input type="text" name="musiqueCour">
+                          </div>
+                       </div>
+                    </fieldset>
+                    <div class="toolbar">
+                       <button type="submit" class="button" name="submitAdmin">Importer le cour</button>
+                    </div>
+                 </form>
+              </div>
+           </section>
+        </main>
+      <?php }
+      ?>
+      <?php 
+        if(isset($currentUser) && $currentUser === null || $currentUser === false)
+        {
+      ?>
+      <main class="container">
+           <section class="container__section--firste">
+              <div class="section__first--masque">
+                  <h1>Erreur!</h1>
+                  <p>Verifiez vos informations!</p>
+              </div>
+           </section>
+        </main>
+      <?php 
+        }
+      ?>
+   </body>
+</html>

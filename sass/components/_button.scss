@@ -1,0 +1,31 @@
+
+button{
+        display: inline-block;
+        padding: 0.5em 1em;
+        margin: 1em;
+        background-color: $white-opacity;
+
+        border: 1.4px solid $white;
+        border-radius: 0.38em;
+        box-sizing: border-box;
+
+        font-family: $body-fnt;
+        font-size: 1em;
+        font-weight: 400;
+        
+
+        text-decoration: none;
+        color: $white;
+        text-align: center;
+
+        cursor: pointer;
+
+        transition: all 0.2s;
+            &:hover{
+                    background-color: $white-opacity;
+            }
+    }
+button > a:hover{
+        
+        color: $white-opacity;
+}

@@ -1,0 +1,36 @@
+@import "utils/variables";
+@import "utils/boucles";
+@import "layouts/header";
+@import "layouts/login";
+@import "components/forms";
+@import "components/button";
+@import "base/general";
+@import "pages/landing";
+@import "pages/allcours";
+@import "pages/index";
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: $white;
+    
+    font-family: $body-fnt;
+    color: $dark-grey;
+}
+.logo{
+    font-family: $logo-fnt;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: $white;
+}
