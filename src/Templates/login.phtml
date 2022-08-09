@@ -1,0 +1,29 @@
+<?php
+   require './src/Templates/layout.phtml';
+?>
+<main class="adm__container">
+   <section class="adm__container__section--first">
+      <div class="adm__section__first--masque">
+            <form action="index.php?route=landing" method="post">
+               <fieldset>
+                  <legend>Administration</legend>
+                  <div class="field">
+                     <label for="username">Nom d'utilisateur</label>
+                     <div class="value">
+                        <input type="text" name="usernameAdmin">
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label for="password">Mot de passe</label>
+                     <div class="value">
+                        <input type="text" name="passwordAdmin">
+                     </div>
+                  </div>
+               </fieldset>
+               <div class="toolbar">
+                  <button type="submit" class="button" name="submitAdmin">Se connecter</button>
+               </div>
+            </form>
+      </div>
+   </section>
+</main>

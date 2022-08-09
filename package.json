@@ -1,0 +1,24 @@
+{
+  "name": "belle-epoque",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "normal": "sass ./sass/style.scss:./css/style.css",
+    "minify": "sass ./sass/style.scss:./css/style.css --style compressed",
+    "watch": "sass ./sass/style.scss:./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansmass/belle-epoque.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ansmass/belle-epoque/issues"
+  },
+  "homepage": "https://github.com/ansmass/belle-epoque#readme",
+  "dependencies": {
+    "sass": "^1.54.0"
+  }
+}
