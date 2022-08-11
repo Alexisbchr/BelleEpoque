@@ -3,7 +3,8 @@
   require 'src/Managers/PageManager.php';
   require './src/Managers/CoursManager.php';
   require 'AuthenticationController.php';
-
+  require 'CoursController.php';
+  
   class RoutingController
   {
     
@@ -11,14 +12,17 @@
      {
        
        $authenticationController = new AuthenticationController();
+       $coursController = new CoursController();
        if(isset($_GET['route'])){
-         if($_GET['route'] === "home_screen")
+         if($_GET['route'] === "homescreen")
          {
            $authenticationController->homescreen();
          }
           else if($_GET['route'] === "login")
          {
-           $authenticationController->login();
+           $pageManager = new PageManager();
+           $page = $pageManager->getPageByRoute($_GET['route']);
+           $authenticationController->login(null,$page);
            
          }
          else if($_GET['route'] === "landing")
@@ -28,16 +32,16 @@
          }
          else if($_GET['route'] === "allcours")
          {
-           $authenticationController->allCours($post);
+           $coursController->allCours($post);
            
          }
          else if($_GET['route'] === "addcours")
          {
-           $authenticationController->addCours();
+           $coursController->addCours();
          }
           else if($_GET['route'] === "singlecours")
          {
-           $authenticationController->singleCours($post);
+           $coursController->singleCours($post);
          }
          else{
            $authenticationController->homescreen();

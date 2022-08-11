@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Belle-Epoque ~ Administration </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+      <?php 
+      if(!empty($currentUser))
+        {
+        ?>
+          <header class="header">
+            <div class="header__logo">
+                <p class="logo">Belle Époque</p>
+            </div>
+            <div class="header__menu">
+                <ul class="header__menu--list">
+                    <li class="header__menu--items">
+                        <a href="#">Accueil</a>
+                    </li>
+                    <li class="header__menu--items">
+                        <a href="#">Gérer les cours</a>
+                    </li>
+                    <li class="header__menu--items">
+                        <a href="#">Gérer le calendrier</a>
+                    </li>
+                </ul>
+            </div>
+          </header>
+        <?php 
+        }
+        else
+        {
+          require './src/Templates/login.phtml';
+        }
+        ?>
+      <?php 
+        if(isset($currentUser) && $currentUser === null || $currentUser === false)
+        {
+      ?>
+        <main class="container">
+           <section class="container__section--firste">
+              <div class="section__first--masque">
+                  <h1>Erreur!</h1>
+                  <p>Verifiez vos informations!</p>
+              </div>
+           </section>
+        </main>
+      <?php 
+        }
+      ?>
+   </body>
+</html>

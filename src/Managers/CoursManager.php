@@ -1,6 +1,7 @@
 <?php
 
-require 'src/Entities/Cours.php';
+require './src/Entities/Cours.php';
+
 class CoursManager
 {
     private PDO $db;
@@ -63,15 +64,18 @@ class CoursManager
         
     }
     
-    // Récuperer tous les cours par la plus ancienne ID 
+    // Récuperer les 4 derniers cours 
     
     public function getLastCours() : array
     {
         $db=$this->db;
-        $query = $db->prepare('SELECT * FROM `cours` ORDER BY `cours`.`id` DESC');
+        $query = $db->prepare
+        ('SELECT * FROM `cours`  
+          ORDER BY `cours`.`id`  DESC
+          LIMIT 4'
+        );
         $query->execute();
         $lastCours = $query->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($lastCours);
         return $lastCours;  
     }
     
