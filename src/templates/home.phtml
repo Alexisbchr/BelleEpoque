@@ -1,0 +1,21 @@
+<main class="container" id="index">
+  <section class="container__section--first">
+    <div class="section__first--masque">
+      <h1>Belle Époque</h1>
+      <p>Association de dance Country & Line</p>
+    </div>
+  </section>
+  <section class="container__section--second">
+    <h2>Derniers cours mis en ligne</h2>
+    <div class="section__second--card-container">
+      <?php 
+        require './src/includes/_lastcours.phtml';
+      ?>
+    </div>
+    <div class="section__second--all">
+      <button>
+      <a href="/BelleEpoque/allcours">Tout les cours</a>
+      </button>
+    </div>
+  </section>
+</main>

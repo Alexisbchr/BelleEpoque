@@ -1,0 +1,12 @@
+/ HomeController:index
+/blog BlogController:index
+/blog/* BlogController:show
+/login AuthentificationController:login
+/logincheck AuthentificationController:logincheck
+/logout AuthentificationController:logout
+/allcours CoursController:allcours
+/singlecours/* CoursController:singlecours
+/admin AdminController:dashboard
+/admin/addcours AdminController:addcours
+/admin/singlecours/* AdminController:singlecours
+/admin/allcours AdminController:allcours

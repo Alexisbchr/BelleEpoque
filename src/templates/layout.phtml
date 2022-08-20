@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BelleEpoque/css/style.css" type="text/css" />
+    <title>Belle-Epoque ~ <?= $pageName ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <?php 
+      include './src/includes/_header.phtml';
+      require './src/templates/'.$page.'.phtml';
+      // include './src/includes/_footer.phtml';  
+    ?>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

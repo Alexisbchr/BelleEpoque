@@ -1,0 +1,25 @@
+<main class="container" id="allcours">
+  <section class="container__section--second">
+    <h2><?= $cours->getMusique();?></h2>
+    <div class="section__second--card-container">
+      <div class="cards">
+        <div class="cards-top">
+          <h3><?= $cours->getMusique();?></h3>
+        </div>
+        <div class="cards-center">
+          <ul class="card-information-cour">
+            <li>Compte: <?= $cours->getCompte();?></li>
+            <li>Mur:<?= $cours->getMur();?></li>
+            <li>Niveau: <?= $cours->getNiveau();?></li>
+            <li>Chorégraphe: <?= $cours->getChoregraphe();?></li>
+            <li>Musique: <?= $cours->getMusique();?></li>
+          </ul>
+        </div>
+        <!--<div class="cards-bottom">-->
+        <!--  <button>-->
+        <!--    <a href="/BelleEpoque/admin/singlecours/<?= $cours['id'];?>">Voir le cours</a>-->
+        <!--  </button>-->
+      </div>
+    </div>       
+  </section>
+</main>

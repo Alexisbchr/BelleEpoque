@@ -1,22 +1,25 @@
 <?php
-  session_start();
-  require 'src/Controllers/RoutingController.php';
-  
-  
-  $routingController= new RoutingController();
-  $authenticationController = new AuthenticationController();
-  $userManager = new UserManager();
-  $coursManager = new CoursManager();
-  $currentUser = null;
-  
-  if(isset($_GET['route']))
+session_start();
+require "autoload.php";
+try {
+
+  $router = new Router();
+
+  if(isset($_GET['path']))
   {
-    var_dump("index.php route : ".$_GET['route']);
-    $routingController-> matchRoute($_GET['route'],$_POST);
+      $request = "/".$_GET['path'];
   }
   else
   {
-      require 'src/Templates/home_screen.phtml';
+      $request = "/";
   }
-?>
 
+  $router->route($routes, $request);
+}
+catch(Exception $e)
+{
+    if($e->getCode() === 404)
+    {
+        require "./src/templates/404.phtml";
+    }
+}

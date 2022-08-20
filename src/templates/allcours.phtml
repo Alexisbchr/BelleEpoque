@@ -1,0 +1,33 @@
+<main class="container" id="allcours">
+  <section class="container__section--second">
+    <h2>Tous les cours</h2>
+    <div class="section__second--card-container">
+      <?php
+        foreach($allCours as $cours)
+        {
+      ?>
+      <div class="cards">
+        <div class="cards-top">
+          <h3><?= $cours['musique'];?></h3>
+        </div>
+        <div class="cards-center">
+          <ul class="card-information-cour">
+            <li>Compte: <?= $cours['compte'];?></li>
+            <li>Mur: <?= $cours['mur'];?></li>
+            <li>Niveau: <?= $cours['niveau'];?></li>
+            <li>Chorégraphe: <?= $cours['choregraphe'];?></li>
+            <li>Musique: <?= $cours['musique'];?></li>
+          </ul>
+        </div>
+        <div class="cards-bottom">
+          <button>
+          <a href="/BelleEpoque/admin/singlecours/<?php $cours['id'] ?>">Voir le cours</a>
+          </button>
+        </div>
+      </div>
+      <?php
+        }
+      ?>        
+    </div>
+  </section>
+</main>
