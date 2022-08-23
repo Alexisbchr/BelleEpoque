@@ -1,0 +1,20 @@
+<main class="container" id="ordercours">
+  <section class="container__section--second">
+       <?php
+if(!empty($coursByFirstLetter[$letter])){
+  for($i = 0, $max = count($coursByFirstLetter[$letter]); $i<$max; $i++){
+    $id = $coursByFirstLetter[$letter][$i]['id'];
+?>
+    <a href="/BelleEpoque/singlecours/<?= $id; ?>">
+      <?= $coursByFirstLetter[$letter][$i]['title'];?>
+    </a>
+
+<?php
+}
+}
+else{
+  header('Location: /BelleEpoque/404');
+}
+?> 
+  </section>
+</main>

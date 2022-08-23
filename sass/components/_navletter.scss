@@ -1,0 +1,14 @@
+.nav-letter{
+  .nav-letter-ul{
+    display:flex;
+    flex-direction:row;
+  }
+  .nav-letter-li{
+      margin-left:3px;
+      list-style-type:none;
+      &>a{
+        color:$body-clr;
+        text-decoration:none;
+      }
+  }
+}

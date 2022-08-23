@@ -12,7 +12,6 @@ class Router {
         $routeData = explode("/", $request);
 
         $route["path"] = "/".$routeData[1];
-        
         //If we have 2 slugs or more 
         if(count($routeData) > 2)
         {
@@ -23,8 +22,9 @@ class Router {
                 if($i==$max)
                 {
                     // ... is a numeric value
-                    if(is_numeric($routeData[$i]))
+                    if(is_numeric($routeData[$i]) || strlen($routeData[$i]) == 1)
                     { 
+
                         // if it is, then it is a parameter
                         $route["parameter"] = $routeData[$i];
                     }

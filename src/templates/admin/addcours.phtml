@@ -1,7 +1,7 @@
 <main class="adm__container">
   <section class="adm__container__section--first">
     <div class="adm__section__first--masque">
-      <form action="/BelleEpoque/admin/addcours" method="post">
+      <form action="/BelleEpoque/admin/addcours" method="post" enctype="multipart/form-data">
         <fieldset>
           <legend>Ajouter un cours</legend>
           <div class="field">
@@ -40,6 +40,12 @@
               <input type="text" name="musique">
             </div>
           </div>
+          <!--<div class="field">-->
+          <!--  <label for="musique">Importer le pdf</label>-->
+          <!--  <div class="value">-->
+          <!--    <input type="file" name="fileToUpload" id="fileToUpload">-->
+          <!--  </div>-->
+          <!--</div>-->
         </fieldset>
         <div class="toolbar">
           <button type="submit" class="button">Importer le cours</button>

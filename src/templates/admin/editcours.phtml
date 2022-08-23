@@ -1,0 +1,54 @@
+<main class="adm__container">
+  <section class="adm__container__section--first">
+    <div class="adm__section__first--masque">
+      <form action="/BelleEpoque/admin/editcours/<?= $cours->getId(); ?>"
+      method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Editer <?= $cours->getTitle(); ?></legend>
+          <div class="field">
+            <label for="compte">Titre</label>
+            <div class="value">
+              <input type="text" name="title" value="<?= $cours->getTitle(); ?>">
+            </div>
+          </div>
+          <div class="field">
+            <label for="compte">Compte</label>
+            <div class="value">
+              <input type="text" name="compte" value="<?= $cours->getCompte(); ?>">
+            </div>
+          </div>
+          <div class="field">
+            <label for="mur">Mur</label>
+            <div class="value">
+              <input type="text" name="mur" value="<?= $cours->getMur(); ?>">
+            </div>
+          </div>
+          <div class="field">
+            <label for="niveau">Niveau</label>
+            <div class="value">
+              <input type="text" name="niveau" value="<?= $cours->getNiveau(); ?>">
+            </div>
+          </div>
+          <div class="field">
+            <label for="choregraphe">Choregraphe</label>
+            <div class="value">
+              <input type="text" name="choregraphe" 
+              value="<?= $cours->getChoregraphe(); ?>">
+            </div>
+          </div>
+          <div class="field">
+            <label for="musique">Musique</label>
+            <div class="value">
+              <input type="text" name="musique" value="<?= $cours->getMusique(); ?>">
+            </div>
+            <input type="hidden" name="id" value="<?= $cours->getId(); ?>">
+          </div>
+        </fieldset>
+        <div class="toolbar">
+          
+          <button type="submit" class="button">Importer le cours</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>

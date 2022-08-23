@@ -1,14 +1,15 @@
 .header {
   width: 100%;
   height: 10vh;
-  padding: 1em;
+  padding: 0 10vw;
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  color: #F2F2F2;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 .header__menu--list {
   display: flex;
@@ -16,9 +17,10 @@
 }
 .header__menu--items > a {
   margin-right: 1.5em;
+  font-size: 1.1em;
   font-family: "Cherry Swash", cursive;
   font-weight: 600;
-  color: #E9E9E9;
+  color: #F2F2F2;
   text-decoration: none;
 }
 
@@ -150,9 +152,9 @@ select:-webkit-autofill:focus {
 
 button {
   display: inline-block;
-  padding: 0.5em 1em;
-  margin: 1em;
-  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.3em;
+  margin: 0.3em;
+  background-color: rgba(0, 0, 0, 0.2);
   border: 1.4px solid #E9E9E9;
   border-radius: 0.38em;
   box-sizing: border-box;
@@ -166,28 +168,182 @@ button {
   transition: all 0.2s;
 }
 button:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 button > a:hover {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.2);
 }
 
-/*MAIN CONTAINER*/
-.adm__container {
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.nav-letter .nav-letter-ul {
+  display: flex;
+  flex-direction: row;
+}
+.nav-letter .nav-letter-li {
+  margin-left: 3px;
+  list-style-type: none;
+}
+.nav-letter .nav-letter-li > a {
+  color: #1E1F1D;
+  text-decoration: none;
+}
+
+.container {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #F2F2F2;
+  /*First section*/
+  /*First section end*/
+  /*Second section*/
+  /*Lessons cards*/
 }
-
-section {
+.container section {
   width: 100%;
-  height: 100vh;
+  height: auto;
+}
+.container .description-cours-li {
+  list-style-type: none;
+}
+.container .container__section--first {
+  background-image: url("../img/image1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #E9E9E9;
+  font-family: "Cherry Swash", cursive;
+}
+.container .container__section--first.section__first--masque h1 {
+  font-size: 5vw;
+}
+.container .container__section--first.section__first--masque p {
+  font-size: 2.5vw;
+}
+.container .section__first--masque {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #E9E9E9;
+}
+.container .container__section--second {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .container__section--second.container__section--second > h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+.container .section__second--card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .cards {
+  max-width: 20vw;
+  max-height: 40vh;
+  margin: 1em;
+  padding: 0.3em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.container .cards.cards-top {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-center: center;
+  text-align: center;
+}
+.container .cards.cards-top > h3 {
+  padding-top: 0.5em;
+  margin: 0;
+  font-weight: 600;
+}
+.container .cards.cards-center {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  text-align: center;
+}
+.container .cards.cards-center.description-cours-li {
+  list-style-type: none;
+}
+.container .cards.cards-bottom {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/*Lessons cards end*/
+.section__second--all {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Second section end*/
 /*First section*/
 .adm__container__section--first {
   background: linear-gradient(to top right, #7c89d5, #f599a5);
@@ -215,7 +371,7 @@ section {
 
 /*First section end*/
 /*Second section*/
-.container__section--second {
+.adm_container__section--second {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -223,31 +379,20 @@ section {
   align-items: center;
 }
 
-.container__section--second > h2 {
+.adm_container__section--second > h2 {
   width: 100%;
   text-align: center;
   font-weight: 400;
 }
 
 /*Lessons cards*/
-.section__second--card-container {
+.adm_section__second--card-container {
   width: 100%;
-  height: 60vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.cards {
-  width: 20%;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  border: none;
-  border-radius: 15px;
-  background-color: var(--light-grey);
-  box-shadow: -1px 4px 10px 5px rgba(0, 0, 0, 0.37);
 }
 
 .cards-top {
@@ -297,293 +442,47 @@ section {
 }
 
 /*Second section end*/
-/*Third section*/
-#allcours.container {
-  /*MAIN CONTAINER*/
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to top right, #7c89d5, #f599a5);
+#allcours {
   /*Second section*/
-  /*Lessons cards*/
-  /*Lessons cards end*/
-  /*Second section end*/
-  /*Third section*/
-  /*Third section end*/
-  /*MAIN CONTAINER END*/
 }
-#allcours.container section {
-  width: 100%;
-  height: 100vh;
-}
-#allcours.container .container__section--second {
+#allcours .container__section--second {
   width: 90%;
   display: flex;
+  height: auto;
+  margin-top: 15vh;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 5vh;
-}
-#allcours.container .container__section--second > h2 {
-  width: 100%;
-  text-align: center;
-  font-weight: 400;
-}
-#allcours.container .section__second--card-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#allcours.container .cards {
-  width: 20%;
-  height: 60vh;
-  display: flex;
-  margin: 1em;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
-}
-#allcours.container .cards.cards-top {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-center: center;
-  text-align: center;
-}
-#allcours.container .cards.cards-top > h3 {
-  padding-top: 0.5em;
-  margin: 0;
-  font-weight: 600;
-}
-#allcours.container .cards-top > .cards-center {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  text-align: center;
-}
-#allcours.container .cards-bottom {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#allcours.container .section__second--all {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#allcours.container .container__section--third {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-#allcours.container .container__section--third.container__section--third button {
-  width: 75px;
-  cursor: pointer;
-  box-shadow: 0px 0px 2px gray;
-  border: none;
-  outline: none;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-}
-#allcours.container #header {
-  padding: 10px;
-  color: #d36c6c;
-  font-size: 26px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: space-between;
-}
-#allcours.container #header button {
-  background-color: #92a1d1;
-}
-#allcours.container #container {
-  width: 770px;
-}
-#allcours.container #weekdays {
-  width: 100%;
-  display: flex;
-  color: #247ba0;
-}
-#allcours.container #weekdays div {
-  width: 100px;
-  padding: 10px;
-}
-#allcours.container #calendar {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-#allcours.container .day {
-  width: 100px;
-  padding: 10px;
-  height: 50px;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: white;
-  margin: 5px;
-  box-shadow: 0px 0px 3px #cbd4c2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#allcours.container .day:hover {
-  background-color: #e8faed;
-}
-#allcours.container .day + #currentDay {
-  background-color: #e8f4fa;
-}
-#allcours.container .event {
-  font-size: 10px;
-  padding: 3px;
-  background-color: #58bae4;
-  color: white;
-  border-radius: 5px;
-  max-height: 55px;
-  overflow: hidden;
-}
-#allcours.container .padding {
-  cursor: default !important;
-  background-color: #fffcff !important;
-  box-shadow: none !important;
-}
-#allcours.container #newEventModal,
-#allcours.container #deleteEventModal {
-  display: none;
-  z-index: 20;
-  padding: 25px;
-  background-color: #e8f4fa;
-  box-shadow: 0px 0px 3px black;
-  border-radius: 5px;
-  width: 350px;
-  top: 100px;
-  left: calc(50% - 175px);
-  position: absolute;
-  font-family: sans-serif;
-}
-#allcours.container #eventTitleInput {
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-  border-radius: 3px;
-  outline: none;
-  border: none;
-  box-shadow: 0px 0px 3px gray;
-}
-#allcours.container #eventTitleInput.error {
-  border: 2px solid red;
-}
-#allcours.container #cancelButton,
-#allcours.container #deleteButton {
-  background-color: #d36c6c;
-}
-#allcours.container #saveButton,
-#allcours.container #closeButton {
-  background-color: #92a1d1;
-}
-#allcours.container #eventText {
-  font-size: 14px;
-}
-#allcours.container #modalBackDrop {
-  display: none;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
-#index.container {
-  /*MAIN CONTAINER*/
+#singlecours {
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #E9E9E9;
-  /*First section*/
-  /*First section end*/
-  /*Second section*/
-  /*Lessons cards*/
-  /*Lessons cards end*/
-  /*Second section end*/
-  /*Third section*/
-  /*Third section end*/
-  /*MAIN CONTAINER END*/
+  background: #F2F2F2;
 }
-#index.container section {
+#singlecours section {
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
-#index.container .container__section--first {
-  background-image: url("../img/image1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #E9E9E9;
-  font-family: "Cherry Swash", cursive;
+#singlecours .description-cours-li {
+  list-style-type: none;
 }
-#index.container .container__section--first.section__first--masque h1 {
-  font-size: 5vw;
-}
-#index.container .container__section--first.section__first--masque p {
-  font-size: 2.5vw;
-}
-#index.container .section__first--masque {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #E9E9E9;
-}
-#index.container .container__section--second {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#index.container .container__section--second > h2 {
-  width: 100%;
-  text-align: center;
-  font-weight: 400;
-}
-#index.container .section__second--card-container {
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#index.container .cards {
+#singlecours .cards {
   width: 20%;
-  height: 60vh;
+  height: auto;
   display: flex;
+  margin: 1em;
+  padding: 1em;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-#index.container .cards.cards-top {
+#singlecours .cards.cards-top {
   width: 100%;
   height: 10vh;
   display: flex;
@@ -592,151 +491,10 @@ section {
   justify-center: center;
   text-align: center;
 }
-#index.container .cards.cards-top > h3 {
+#singlecours .cards.cards-top > h3 {
   padding-top: 0.5em;
   margin: 0;
   font-weight: 600;
-}
-#index.container .cards-top > .cards-center {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  text-align: center;
-}
-#index.container .cards-bottom {
-  width: 100%;
-  height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#index.container .section__second--all {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#index.container .container__section--third {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-#index.container .container__section--third.container__section--third button {
-  width: 75px;
-  cursor: pointer;
-  box-shadow: 0px 0px 2px gray;
-  border: none;
-  outline: none;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-}
-#index.container #header {
-  padding: 10px;
-  color: #d36c6c;
-  font-size: 26px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: space-between;
-}
-#index.container #header button {
-  background-color: #92a1d1;
-}
-#index.container #container {
-  width: 770px;
-}
-#index.container #weekdays {
-  width: 100%;
-  display: flex;
-  color: #247BA0;
-}
-#index.container #weekdays div {
-  width: 100px;
-  padding: 10px;
-}
-#index.container #calendar {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-#index.container .day {
-  width: 100px;
-  padding: 10px;
-  height: 50px;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: white;
-  margin: 5px;
-  box-shadow: 0px 0px 3px #CBD4C2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#index.container .day:hover {
-  background-color: #e8faed;
-}
-#index.container .day + #currentDay {
-  background-color: #e8f4fa;
-}
-#index.container .event {
-  font-size: 10px;
-  padding: 3px;
-  background-color: #58bae4;
-  color: white;
-  border-radius: 5px;
-  max-height: 55px;
-  overflow: hidden;
-}
-#index.container .padding {
-  cursor: default !important;
-  background-color: #FFFCFF !important;
-  box-shadow: none !important;
-}
-#index.container #newEventModal, #index.container #deleteEventModal {
-  display: none;
-  z-index: 20;
-  padding: 25px;
-  background-color: #e8f4fa;
-  box-shadow: 0px 0px 3px black;
-  border-radius: 5px;
-  width: 350px;
-  top: 100px;
-  left: calc(50% - 175px);
-  position: absolute;
-  font-family: sans-serif;
-}
-#index.container #eventTitleInput {
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-  border-radius: 3px;
-  outline: none;
-  border: none;
-  box-shadow: 0px 0px 3px gray;
-}
-#index.container #eventTitleInput.error {
-  border: 2px solid red;
-}
-#index.container #cancelButton, #index.container #deleteButton {
-  background-color: #d36c6c;
-}
-#index.container #saveButton, #index.container #closeButton {
-  background-color: #92a1d1;
-}
-#index.container #eventText {
-  font-size: 14px;
-}
-#index.container #modalBackDrop {
-  display: none;
-  top: 0px;
-  left: 0px;
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -759,7 +517,8 @@ body {
   font-family: "Cherry Swash", cursive;
   font-size: 1.5em;
   font-weight: 600;
-  color: #E9E9E9;
+  color: #F2F2F2;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

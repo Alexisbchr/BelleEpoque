@@ -1,5 +1,9 @@
 <?php
 
+/**
+* This file contains all functions for CRUD lesson
+*/
+
 require './src/entities/Cours.php';
 
 class CoursManager
@@ -61,7 +65,17 @@ class CoursManager
         $query->execute();
         $allCours = $query->fetchAll(PDO::FETCH_ASSOC);
         return $allCours;
-        
+    }
+    // Récuperer les tous les cours par la premiere lettre du titre
+    
+    public function orderCoursByLetter() : array 
+    {
+        $db=$this->db;
+        $query = $db->prepare('SELECT * FROM cours ORDER BY cours.title');
+        $query->execute();
+        $orderCoursByLetter = $query->fetchAll(PDO::FETCH_ASSOC);
+      
+        return $orderCoursByLetter;
     }
     
     // Récuperer les 4 derniers cours 
@@ -81,7 +95,7 @@ class CoursManager
     
     // Inserer un cours dans la base de donnée
     
-    public function insertCour(string $title, int $compte, int $mur, 
+    public function insertCours(string $title, int $compte, int $mur, 
     string $niveau, string $choregraphe, string $musique)
     {
       $db=$this->db;
@@ -99,6 +113,46 @@ class CoursManager
       $query->execute($parameters);
     }
     
+    // Editer un cours
     
+    public function editCours(string $title, int $compte, int $mur, 
+    string $niveau, string $choregraphe, string $musique, int $id)
+    {
+      try {
+        
+        $db=$this->db;
+        $query = $db->prepare(
+        'UPDATE cours SET title=:title, compte=:compte, mur=:mur, niveau=:niveau,
+        choregraphe=:choregraphe, musique=:musique WHERE id=:id');
+        $parameters = [
+          'title' => $title,
+          'compte' => $compte,
+          'mur' => $mur,
+          'niveau' => $niveau,
+          'choregraphe' => $choregraphe,
+          'musique' => $musique,
+          'id' => $id
+        ];
+        $query->execute($parameters);
+        header('Location: admin');    
+      }
+      catch(Exception $e)
+      {
+        echo $e->getMessage() . "<br>";
+      }
+    }
+    
+    // Supprimer un cours par son id
+    
+    public function deleteCoursById(int $id)
+    {
+      $db=$this->db;
+      $query = $db->prepare('DELETE FROM cours WHERE id=:id');
+      $parameters = [
+        'id' => $id
+      ];
+      $query->execute($parameters);
+      include './src/includes/_success.phtml';
+    }
     
 }
