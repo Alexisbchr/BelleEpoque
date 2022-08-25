@@ -1,20 +1,28 @@
 <main class="container" id="ordercours">
-  <section class="container__section--second">
-       <?php
-if(!empty($coursByFirstLetter[$letter])){
-  for($i = 0, $max = count($coursByFirstLetter[$letter]); $i<$max; $i++){
-    $id = $coursByFirstLetter[$letter][$i]['id'];
-?>
-    <a href="/BelleEpoque/singlecours/<?= $id; ?>">
-      <?= $coursByFirstLetter[$letter][$i]['title'];?>
-    </a>
-
-<?php
-}
-}
-else{
-  header('Location: /BelleEpoque/404');
-}
-?> 
+  <section class="ordered-cours-container">
+    <h2>Recherche terminée!</h2>
+    <p>Voici l'ensemble des résultats de votre requête...</p>
+    <div class="card-results">
+      <ul>
+        <?php
+          if(!empty($coursByFirstLetter[$letter])){
+            for($i = 0, $max = count($coursByFirstLetter[$letter]); $i<$max; $i++){
+              $id = $coursByFirstLetter[$letter][$i]['id'];
+          ?>
+            <li class="li-cours-results">
+              <a href="/BelleEpoque/singlecours/<?= $id; ?>">
+                <?= $coursByFirstLetter[$letter][$i]['title'];?>
+              </a>
+            </li>
+          <?php
+            }
+          }
+          else{
+            header('Location: /BelleEpoque/404');
+          }
+        ?> 
+      </ul> 
+    </div>
   </section>
+  <?php require './src/includes/_aside.phtml';?>
 </main>

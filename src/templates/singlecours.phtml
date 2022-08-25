@@ -1,5 +1,5 @@
 <main class="container" id="singlecours">
-  <section class="container__section--second">
+  <section class="single-cours-container">
     <h2><?= $cours->getTitle();?></h2>
     <div class="section__second--card-container">
       <div class="cards">
@@ -15,11 +15,13 @@
             <li class="description-cours-li">Musique: <?= $cours->getMusique();?></li>
           </ul>
         </div>
-        <!--<div class="cards-bottom">-->
-        <!--  <button>-->
-        <!--    <a href="/BelleEpoque/admin/singlecours/<?= $cours['id'];?>">Voir le cours</a>-->
-        <!--  </button>-->
       </div>
-    </div>       
+    </div>
+    <button class="button-4" role="button">
+        <span class="text">
+          <a href="javascript:history.go(-1)">Retour</a>
+        </span>
+      </button>
   </section>
+  <?php require './src/includes/_aside.phtml'; ?>
 </main>

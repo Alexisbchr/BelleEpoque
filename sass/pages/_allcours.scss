@@ -1,6 +1,5 @@
-
-      // Template of allcours.phtml page //
-
+     // Template of allcours.phtml page //
+     
 #allcours {
 
   /*Second section*/
@@ -9,11 +8,10 @@
     display: flex;
     height:auto;
     
-    margin-top: 15vh;
+    padding:100px 0;
     
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
   }
-  
 }

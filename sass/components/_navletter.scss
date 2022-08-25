@@ -1,6 +1,13 @@
 .nav-letter{
+  margin-bottom: 30px;
+  h3{
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
   .nav-letter-ul{
     display:flex;
+    justify-content:center;
     flex-direction:row;
   }
   .nav-letter-li{

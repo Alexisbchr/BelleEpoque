@@ -47,8 +47,6 @@ class CoursController
         $previousFirstLetter = $firstLetter;
         $j++;
       }
-            
-      require_once './src/templates/layout.phtml';
       return $coursByFirstLetter;
     }
     public function orderbyletter(string $letter)

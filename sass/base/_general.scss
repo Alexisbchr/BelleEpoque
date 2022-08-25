@@ -12,11 +12,31 @@
     width: 100%;
     height: auto;
   }
-
   .description-cours-li {
     list-style-type: none;
   }
-
+  h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  h3{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  p{
+    text-align:justify;
+    margin-bottom: 8px;
+  }
+  a{
+    color: $body-clr;
+    text-decoration: none;  
+  }
   /*First section*/
   .container__section--first {
     background-image: url("../img/image1.jpg");
@@ -26,19 +46,24 @@
     background-attachment: fixed;
     color: $white;
     font-family: $logo-fnt;
-
-    &.section__first--masque h1 {
-      font-size: 5vw;
-    }
-
-    &.section__first--masque p {
-      font-size: 2.5vw;
-    }
+  }
+  .section__first--masque > h1 {
+    font-size: 68px;
+    font-family: $logo-fnt;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .section__first--masque p {
+    font-size: 20px;
+    font-family: $body-fnt;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
   }
 
   .section__first--masque {
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,87 +76,47 @@
   /*Second section*/
   .container__section--second {
     width: 90%;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    &.container__section--second>h2 {
-      width: 100%;
-      text-align: center;
-      font-weight: 400;
-     
-    }
-    
-   }
-   /*Lessons cards*/
-   .section__second--card-container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: space-evenly;
-    align-items: center;
-   }
-   .cards {
-      max-width: 20vw;
-      max-height: 40vh;
-      
-      margin: 1em;
-      padding: 0.3em;
-      
-      display: flex;
-      flex-direction: column;
-      
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
-        rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
 
-      &.cards-top {
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-center: center;
-        text-align: center;
-
-        &>h3 {
-          padding-top: 0.5em;
-          margin: 0;
-          font-weight: 600;
-        }
-      }
-      &.cards-center {
-        width: 100%;
-        height: 40vh;
-        display: flex;
-        text-align: center;
-        &.description-cours-li {
-        list-style-type: none;
-        }
-      }
-      &.cards-bottom {
-        width: 100%;
-        height: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-      }
-    }
-  
-  
-
-
- 
-  /*Lessons cards end*/
   .section__second--all {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-  /*Second section end*/
-
- 
+    
+  .section__second--all button a{
+    color: $body-clr;
+    text-decoration: none;
+  }
+  /*Second section end */
+  
+  .container__section--third{
+    width: 90%;
+    padding: 100px 0;
+  }
+  .section--presentation-container{
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+  }
+  .card--presentation{
+    width: 40%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding: 1em;
+  }
+  .presentation--details{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+  }
+}

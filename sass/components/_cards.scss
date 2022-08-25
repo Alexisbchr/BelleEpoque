@@ -1,0 +1,45 @@
+.section__second--card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  
+  .cards {
+    width: 300px;
+    height: 320px;
+    margin: 0.5em;
+    flex-direction:column;
+    display:flex;
+    flex-wrap:no-wrap;
+    justify-content:space-around;
+    text-align: center;
+    box-shadow: $cards-shdw;
+  }
+  
+  .cards-top {
+    width: 100%;
+  }
+  .cards-top > h3 {
+    padding-top: 0.5em;
+  }
+  
+  .cards-center {
+    width: 100%;
+    &.description-cours-li {
+      list-style-type: none;
+    }
+  }
+  
+  .cards-bottom {
+    width: 100%;
+    
+    &.cards-bottom button a {
+      color: $body-clr;
+      text-decoration: none;
+    }
+  }
+}

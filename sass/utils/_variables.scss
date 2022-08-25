@@ -1,6 +1,6 @@
 // Fonts Family
 
-    $body-fnt : 'Montserrat', sans-serif;
+    $body-fnt : 'Raleway', sans-serif;
     $logo-fnt : 'Cherry Swash', cursive;
 
 //Colors
@@ -23,3 +23,9 @@
     $header-a-clr : #1E1F1D;
     $section-title-clr : #E9E9E9;
 
+//Box Shadows
+
+    $cards-shdw: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    $header-shdw: rgba(9, 30, 66, 0.25) 0px 1px 1px, 
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
