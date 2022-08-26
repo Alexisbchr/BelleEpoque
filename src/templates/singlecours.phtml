@@ -3,19 +3,27 @@
     <h2><?= $cours->getTitle();?></h2>
     <div class="section__second--card-container">
       <div class="cards">
-        <div class="cards-top">
-          <h3><?= $cours->getTitle();?></h3>
-        </div>
         <div class="cards-center">
           <ul class="card-information-cour">
-            <li class="description-cours-li">Compte: <?= $cours->getCompte();?></li>
-            <li class="description-cours-li">Mur: <?= $cours->getMur();?></li>
-            <li class="description-cours-li">Niveau: <?= $cours->getNiveau();?></li>
-            <li class="description-cours-li">Chorégraphe: <?= $cours->getChoregraphe();?></li>
-            <li class="description-cours-li">Musique: <?= $cours->getMusique();?></li>
+            <li class="description-cours-li"><span>Compte: </span>
+            <span class="cours-li-result"><?= $cours->getCompte();?></span></li>
+            <li class="description-cours-li"><span>Mur: </span>
+            <span class="cours-li-result"><?= $cours->getMur();?></span></li>
+            <li class="description-cours-li"><span>Niveau: </span>
+            <span class="cours-li-result"><?= $cours->getNiveau();?></span></li>
+            <li class="description-cours-li"><span>Chorégraphe: </span>
+            <span class="cours-li-result"><?= $cours->getChoregraphe();?></span></li>
+            <li class="description-cours-li"><span>Musique: </span>
+            <span class="cours-li-result"><?= $cours->getMusique();?></span></li>
+            <li class="description-cours-li"><span>Pdf: </span>
+            <span class="cours-li-result"><a href="<?= $cours->getPdf();?>">Voir le pdf</a></span></li>
           </ul>
         </div>
       </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/
+      <?= $cours->getLien(); ?>" title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+      picture-in-picture" allowfullscreen></iframe>
     </div>
     <button class="button-4" role="button">
         <span class="text">

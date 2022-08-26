@@ -43,6 +43,18 @@
             </div>
             <input type="hidden" name="id" value="<?= $cours->getId(); ?>">
           </div>
+          <div class="field">
+            <label for="lien">Lien</label>
+            <div class="value">
+              <input type="text" name="lien" value="<?= $cours->getLien(); ?>">
+            </div>
+          </div>
+          <div class="field">
+            <label for="lien">PDF</label>
+            <div class="value">
+              <input type="text" name="pdf" value="<?= $cours->getPdf(); ?>">
+            </div>
+          </div>
         </fieldset>
         <div class="toolbar">
           

@@ -51,7 +51,7 @@ class CoursManager
         $cour = $query->fetchAll(PDO::FETCH_ASSOC);
         $coursById = new Cours($cour[0]['id'], $cour[0]['title'], 
         $cour[0]['compte'],$cour[0]['mur'], $cour[0]['niveau'], 
-        $cour[0]['choregraphe'], $cour[0]['musique']);
+        $cour[0]['choregraphe'], $cour[0]['musique'], $cour[0]['lien'], $cour[0]['pdf']);
         return $coursById;
         
     }
@@ -96,19 +96,21 @@ class CoursManager
     // Inserer un cours dans la base de donnée
     
     public function insertCours(string $title, int $compte, int $mur, 
-    string $niveau, string $choregraphe, string $musique)
+    string $niveau, string $choregraphe, string $musique, string $lien, string $pdf)
     {
       $db=$this->db;
       $query = $db->prepare('INSERT INTO `cours`(`title`, `compte`, `mur`, 
-        `niveau`, `choregraphe`, `musique`) 
-        VALUES (:title,:compte, :mur, :niveau, :choregraphe, :musique)');
+        `niveau`, `choregraphe`, `musique`, `lien`, `pdf`) 
+        VALUES (:title,:compte, :mur, :niveau, :choregraphe, :musique, :lien, :pdf)');
       $parameters = [
         'title' => $title,
         'compte' => $compte,
         'mur' => $mur,
         'niveau' => $niveau,
         'choregraphe' => $choregraphe,
-        'musique' => $musique
+        'musique' => $musique,
+        'lien' => $lien,
+        'pdf' => $pdf
       ];
       $query->execute($parameters);
     }
@@ -116,14 +118,14 @@ class CoursManager
     // Editer un cours
     
     public function editCours(string $title, int $compte, int $mur, 
-    string $niveau, string $choregraphe, string $musique, int $id)
+    string $niveau, string $choregraphe, string $musique, int $id, string $lien, string $pdf)
     {
       try {
         
         $db=$this->db;
         $query = $db->prepare(
         'UPDATE cours SET title=:title, compte=:compte, mur=:mur, niveau=:niveau,
-        choregraphe=:choregraphe, musique=:musique WHERE id=:id');
+        choregraphe=:choregraphe, musique=:musique, lien=:lien, pdf=:pdf WHERE id=:id');
         $parameters = [
           'title' => $title,
           'compte' => $compte,
@@ -131,7 +133,9 @@ class CoursManager
           'niveau' => $niveau,
           'choregraphe' => $choregraphe,
           'musique' => $musique,
-          'id' => $id
+          'id' => $id,
+          'lien' => $lien,
+          'pdf' => $pdf
         ];
         $query->execute($parameters);
         header('Location: admin');    

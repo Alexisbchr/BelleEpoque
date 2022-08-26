@@ -8,9 +8,36 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
+  }
+  .section__second--card-container{
+    justify-content:left;
   }
   .cards{
-    justify-content:center;
+    width:500px;
+    height:auto;
+    display:flex;
+    justify-content:start;
+    box-shadow:none;
+    margin-bottom: 30px;
+  }
+  .card-information-cour{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .description-cours-li{
+    display:flex;
+    padding: 0 0 1em 1em;
+    & > span{
+      text-align:left;
+      margin-left: 1em;
+    &.cours-li-result{
+      font-weight: bold
+    }
+    }
+  }
+  iframe{
+    padding: 0 0 1em 1em;
   }
 }

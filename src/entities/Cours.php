@@ -10,9 +10,11 @@
     private string $niveau;
     private string $choregraphe;
     private string $musique;
-
+    private string $lien;
+    private string $pdf;
     
-    public function __construct(int $id, string $title, int $compte, int $mur, string $niveau, string $choregraphe, string $musique)
+    public function __construct(int $id, string $title, int $compte, int $mur, 
+    string $niveau, string $choregraphe, string $musique, string $lien, string $pdf)
     {
         $this-> id = $id;
         $this-> title = $title;
@@ -21,6 +23,8 @@
         $this-> niveau = $niveau;
         $this-> choregraphe = $choregraphe;
         $this-> musique= $musique;
+        $this-> lien = $lien;
+        $this-> pdf = $pdf;
     }
     
     public function getId(): int
@@ -58,6 +62,16 @@
         return $this->musique;
     }
     
+    public function getLien(): string
+    {
+        return $this->lien;
+    }
+    
+    public function getPdf(): string
+    {
+        return $this->pdf;
+    }
+    
     public function setId(): int
     {
         return $this->id;
@@ -92,4 +106,13 @@
         return $this->niveau;
     }
     
+    public function setLien(): string
+    {
+        return $this->lien;
+    }
+    
+    public function setPdf(): string
+    {
+        return $this->pdf;
+    }
   }

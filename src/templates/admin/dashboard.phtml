@@ -1,6 +1,6 @@
-<main class="container">
-   <section class="adm__container__section--first">
-      <div class="adm__section__first--masque">
+<main class="container" id="dashboard">
+   <section class="container__section--first">
+      <div class="section__first--masque">
       <h2>Bienvenue <?php $_SESSION['user'] ?></h2>
       <div class="cards">
         <div class="cards-top">
@@ -8,8 +8,10 @@
         </div>
         <div class="cards-center">
           <ul class="description-cours-ul">
-            <li class="description-cours-li"><a href="/BelleEpoque/admin/addcours">Ajouter un cours</a></li>
-            <li class="description-cours-li"><a href="/BelleEpoque/admin/allcours">Voir les cours</a></li>
+            <li class="description-cours-li">
+              <a href="/BelleEpoque/admin/addcours">Ajouter un cours</a></li>
+            <li class="description-cours-li">
+              <a href="/BelleEpoque/admin/allcours">Voir les cours</a></li>
           </ul>
         </div>
       </div>

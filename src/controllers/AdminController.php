@@ -77,12 +77,13 @@ class AdminController
       $cours = $coursManager->getCoursById($id);
       if (isset($_POST['id']) && isset($_POST['title']) && isset($_POST['compte']) 
           && isset($_POST['mur']) && isset($_POST['niveau']) 
-          && isset($_POST['choregraphe']) && isset($_POST['musique']))
+          && isset($_POST['choregraphe']) && isset($_POST['musique']) && 
+          isset($_POST['lien']))
         {
           $coursManager = new CoursManager();
           $cours = $coursManager -> editCours($_POST['title'], $_POST['compte'], 
           $_POST['mur'],$_POST['niveau'],$_POST['choregraphe'], $_POST['musique'],
-          $_POST['id']);
+          $_POST['id'],$_POST['lien']);
         }
       $page = "editcours";
       $pageName = "Ajouter un cours";
