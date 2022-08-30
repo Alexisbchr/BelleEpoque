@@ -7,7 +7,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      color: $white;
+      color: $body-clr;
       font-family: $logo-fnt;
     }
     .section__first--masque > h1 {
@@ -15,6 +15,7 @@
       font-family: $logo-fnt;
       font-weight: 700;
       font-style: normal;
+      color:$footer-clr;
     }
     .section__first--masque p {
       font-size: 20px;
@@ -22,6 +23,7 @@
       font-weight: 700;
       font-style: normal;
       text-transform: uppercase;
+      color:$footer-clr;
     }
 
     .section__first--masque {

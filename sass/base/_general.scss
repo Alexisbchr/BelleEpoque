@@ -1,6 +1,7 @@
 * {
   font-size: 16px;
   font-family: $body-fnt;
+  color:$body-clr;
 }
 
 .container {
@@ -11,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $white2;
+  background-color: $body-bgc;
   
   section {
     width: 100%;

@@ -1,7 +1,12 @@
-footer{
+.footer{
+  width:100%;
   padding: 100px 0;
+  background-color: $footer-bgc;
   .footer__header{
     margin-bottom: 30px;
     text-align:center;
+    >p,h2{
+      color:$footer-clr;
+    }
   }
 }

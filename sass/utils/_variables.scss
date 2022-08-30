@@ -6,8 +6,8 @@
 //Colors
 
     $white-opacity : rgba(0, 0, 0, 0.2);
-    $white : #E9E9E9;
-    $white2 : #F8FBF1;
+    $white : #edf2f4;
+    $white2 : #edf2f4;
     $dark-grey: #1E1F1D;
     $light-grey: #ADADAD;
     $light2x-grey: #DBDBDB;
@@ -17,11 +17,19 @@
     $bright-navy-blue: #277AD7ff;
     $aero: #75BDEBff;
 
+
+//Bgc
+    $header-bgc: rgba(43, 45, 66, 1);
+    $body-bgc: #edf2f4;
+    $footer-bgc:#2b2d42;
+
 //Fonts Colors
     
-    $body-clr : #1E1F1D;
-    $header-a-clr : #1E1F1D;
+    $body-clr : #2b2d42;
+    $header-a-clr : #edf2f4;
     $section-title-clr : #E9E9E9;
+    $cards-clr: #2b2d42;
+    $footer-clr:#edf2f4;
 
 //Box Shadows
 

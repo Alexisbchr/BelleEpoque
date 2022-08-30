@@ -1,7 +1,4 @@
 @media (max-width: 360px) {
-  .container {
-    padding: 100px 0;
-  }
   /* Header start */
   .header {
     display: flex;
@@ -48,7 +45,7 @@
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    color: #F8FBF1;
+    color: #edf2f4;
     text-decoration: none;
   }
   header > span {
@@ -64,7 +61,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #E9E9E9;
+    color: #edf2f4;
     font-family: "Cherry Swash", cursive;
   }
   .section__first--masque > h1 {
@@ -88,7 +85,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-    color: #E9E9E9;
+    color: #edf2f4;
   }
   /*First section end*/
   /* Presentation section start */
@@ -136,7 +133,7 @@
     align-items: center;
   }
   .section__second--all button a {
-    color: #1E1F1D;
+    color: #2b2d42;
     text-decoration: none;
   }
   /*Second section end */
@@ -260,7 +257,7 @@
     justify-content: space-between;
     align-items: center;
     color: #F2F2F2;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(43, 45, 66);
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
   }
   .header__menu--list {
@@ -273,19 +270,24 @@
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    color: #F8FBF1;
+    color: #edf2f4;
     text-decoration: none;
   }
   header > span {
     display: none;
   }
 }
-footer {
+.footer {
+  width: 100%;
   padding: 100px 0;
+  background-color: #2b2d42;
 }
-footer .footer__header {
+.footer .footer__header {
   margin-bottom: 30px;
   text-align: center;
+}
+.footer .footer__header > p, .footer .footer__header h2 {
+  color: #edf2f4;
 }
 
 aside {
@@ -331,7 +333,7 @@ aside {
   width: 100%;
 }
 .section__second--card-container .cards-bottom.cards-bottom button a {
-  color: #1E1F1D;
+  color: #2b2d42;
   text-decoration: none;
 }
 
@@ -386,13 +388,13 @@ legend {
 input:focus {
   outline: none !important;
   border-bottom: 20px solid;
-  border-color: #E9E9E9;
+  border-color: #edf2f4;
 }
 
 textarea:focus {
   outline: none !important;
   border-bottom: 4px solid;
-  border-color: #E9E9E9;
+  border-color: #edf2f4;
 }
 
 label {
@@ -458,8 +460,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-bottom: 2px solid #1E1F1D;
-  -webkit-text-fill-color: #1E1F1D;
+  border-bottom: 2px solid #2b2d42;
+  -webkit-text-fill-color: #2b2d42;
   -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -467,14 +469,14 @@ select:-webkit-autofill:focus {
 /* CSS */
 .button-4 {
   max-width: 200px;
-  margin-top: 15px;
+  margin: 15px 0 15px 0;
   appearance: none;
   background-color: #FAFBFC;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   box-sizing: border-box;
-  color: #1E1F1D;
+  color: #2b2d42;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -586,13 +588,23 @@ select:-webkit-autofill:focus {
   list-style-type: none;
 }
 .nav-letter .nav-letter-li > a {
-  color: #1E1F1D;
+  color: #2b2d42;
   text-decoration: none;
+}
+
+.nav__section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.nav__section > .button-4 {
+  margin: 0.5em;
 }
 
 * {
   font-size: 16px;
   font-family: "Raleway", sans-serif;
+  color: #2b2d42;
 }
 
 .container {
@@ -603,7 +615,7 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F8FBF1;
+  background-color: #edf2f4;
 }
 .container section {
   width: 100%;
@@ -631,7 +643,7 @@ select:-webkit-autofill:focus {
   margin-bottom: 8px;
 }
 .container a {
-  color: #1E1F1D;
+  color: #2b2d42;
   text-decoration: none;
 }
 .container img {
@@ -659,11 +671,11 @@ select:-webkit-autofill:focus {
 }
 #dashboard .section__first--masque h1 {
   font-size: 5vw;
-  color: #E9E9E9;
+  color: #edf2f4;
 }
 #dashboard .section__first--masque p {
   font-size: 2.5vw;
-  color: #E9E9E9;
+  color: #edf2f4;
 }
 #dashboard .container__section--second {
   width: 90%;
@@ -704,7 +716,7 @@ select:-webkit-autofill:focus {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #E9E9E9;
+    color: #2b2d42;
     font-family: "Cherry Swash", cursive;
   }
   .container .section__first--masque > h1 {
@@ -712,6 +724,7 @@ select:-webkit-autofill:focus {
     font-family: "Cherry Swash", cursive;
     font-weight: 700;
     font-style: normal;
+    color: #edf2f4;
   }
   .container .section__first--masque p {
     font-size: 20px;
@@ -719,6 +732,7 @@ select:-webkit-autofill:focus {
     font-weight: 700;
     font-style: normal;
     text-transform: uppercase;
+    color: #edf2f4;
   }
   .container .section__first--masque {
     width: 100%;
@@ -728,7 +742,7 @@ select:-webkit-autofill:focus {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-    color: #E9E9E9;
+    color: #edf2f4;
   }
   .container .container__section--third {
     width: 90%;
@@ -885,7 +899,7 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
 }
 #ordercours .li-cours-results > a:hover {
-  border-bottom: 2px solid #1E1F1D;
+  border-bottom: 2px solid #2b2d42;
 }
 
 * {
@@ -899,16 +913,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E9E9E9;
+  background-color: #edf2f4;
   font-family: "Raleway", sans-serif;
-  color: #1E1F1D;
+  color: #2b2d42;
 }
 
 .logo {
   font-family: "Cherry Swash", cursive;
   font-size: 1.5em;
   font-weight: 600;
-  color: #F8FBF1;
+  color: #edf2f4;
   text-decoration: none;
 }
 

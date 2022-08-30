@@ -23,11 +23,7 @@
       </div>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $cours->getLien(); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <button class="button-4" role="button">
-        <span class="text">
-          <a href="javascript:history.go(-1)">Retour</a>
-        </span>
-      </button>
+    <?php require './src/includes/_navsection.phtml'; ?>
   </section>
   <?php require './src/includes/_aside.phtml'; ?>
 </main>

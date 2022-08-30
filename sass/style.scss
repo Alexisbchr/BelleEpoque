@@ -10,6 +10,7 @@
 @import "components/button";
 @import "components/loader";
 @import "components/navletter";
+@import "components/navsection";
 @import "base/general";
 @import "pages/dashboard";
 @import "pages/allcours";
@@ -30,10 +31,10 @@ body{
     flex-direction: column;
     align-items: center;
     
-    background-color: $white;
+    background-color: $body-bgc;
     
     font-family: $body-fnt;
-    color: $dark-grey;
+    color: $body-clr;
 }
 .logo{
       font-family: $logo-fnt;
