@@ -1,0 +1,24 @@
+Template list
+  General
+    layout
+    404
+    home
+  Lesson
+    allcours
+    ordercours
+    ordercoursbyletter
+    singlecours
+  Admin
+    login
+    logincheck
+    addcours
+    dashboard
+    deletecours
+    editcours
+    singlecours
+    allcours
+  Pages
+    association
+    legals
+    contact
+    
