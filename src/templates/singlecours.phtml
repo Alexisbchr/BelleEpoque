@@ -15,15 +15,13 @@
             <span class="cours-li-result"><?= $cours->getChoregraphe();?></span></li>
             <li class="description-cours-li"><span>Musique: </span>
             <span class="cours-li-result"><?= $cours->getMusique();?></span></li>
-            <li class="description-cours-li"><span>Pdf: </span>
-            <span class="cours-li-result"><a href="<?= $cours->getPdf();?>">Voir le pdf</a></span></li>
+            <li class="description-cours-li">
+            <span class="cours-li-result"><img src="../img/icons/file_pdf.svg"><a href="<?= $cours->getPdf();?>">
+              Voir le pdf</a></span></li>
           </ul>
         </div>
       </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/
-      <?= $cours->getLien(); ?>" title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-      picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $cours->getLien(); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <button class="button-4" role="button">
         <span class="text">

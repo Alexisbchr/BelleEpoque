@@ -1,31 +1,285 @@
-.header {
-  width: 100%;
-  height: 8vh;
-  padding: 0 10vw;
-  position: fixed;
-  z-index: 999999;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #F2F2F2;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+@media (max-width: 360px) {
+  .container {
+    padding: 100px 0;
+  }
+  /* Header start */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 13vh;
+    padding: 0 10vw;
+    position: fixed;
+    z-index: 999999;
+    flex-direction: column;
+    align-items: center;
+    color: #F2F2F2;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
+  .header__logo {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__menu--list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .header__menu--list {
+    display: none;
+    position: fixed;
+    list-style: none;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header__menu--items {
+    margin-bottom: 1.3em;
+  }
+  .header__menu--items > a {
+    font-size: 1em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F8FBF1;
+    text-decoration: none;
+  }
+  header > span {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+  }
+  /*Header end*/
+  /*First section*/
+  .container__section--first {
+    background-image: url("../img/image1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #E9E9E9;
+    font-family: "Cherry Swash", cursive;
+  }
+  .section__first--masque > h1 {
+    font-size: 2em;
+    font-family: "Cherry Swash", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .section__first--masque p {
+    font-size: 0.8em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .section__first--masque {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #E9E9E9;
+  }
+  /*First section end*/
+  /* Presentation section start */
+  .container__section--third {
+    width: 100%;
+    padding: 100px 0 0 0;
+  }
+  .section--presentation-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .card--presentation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+  }
+  .card--presentation.disable {
+    display: none;
+  }
+  .presentation--details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  /* Presentation section end */
+  /*Second section*/
+  .container__section--second {
+    width: 100%;
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .section__second--all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section__second--all button a {
+    color: #1E1F1D;
+    text-decoration: none;
+  }
+  /*Second section end */
+  aside {
+    display: none;
+  }
+  #singlecours,
+#contact,
+#association,
+#legals {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #singlecours .single-cours-container,
+#contact .single-cours-container,
+#association .single-cours-container,
+#legals .single-cours-container {
+    width: 100%;
+    align-items: center;
+    padding: 100px 10px 100px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #singlecours .cards,
+#contact .cards,
+#association .cards,
+#legals .cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    box-shadow: none;
+    margin-bottom: 30px;
+  }
+  #singlecours .card-information-cour,
+#contact .card-information-cour,
+#association .card-information-cour,
+#legals .card-information-cour {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #singlecours .description-cours-li,
+#contact .description-cours-li,
+#association .description-cours-li,
+#legals .description-cours-li {
+    display: flex;
+    align-items: center;
+    padding: 0 0 1em 0;
+  }
+  #singlecours .description-cours-li .cours-li-result,
+#contact .description-cours-li .cours-li-result,
+#association .description-cours-li .cours-li-result,
+#legals .description-cours-li .cours-li-result {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  #singlecours .description-cours-li .cours-li-result > img,
+#contact .description-cours-li .cours-li-result > img,
+#association .description-cours-li .cours-li-result > img,
+#legals .description-cours-li .cours-li-result > img {
+    margin-bottom: 0;
+  }
+  #singlecours .description-cours-li > span,
+#contact .description-cours-li > span,
+#association .description-cours-li > span,
+#legals .description-cours-li > span {
+    text-align: left;
+    margin-left: 1em;
+  }
+  #singlecours .description-cours-li > span.cours-li-result, #singlecours .description-cours-li > span a,
+#contact .description-cours-li > span.cours-li-result,
+#contact .description-cours-li > span a,
+#association .description-cours-li > span.cours-li-result,
+#association .description-cours-li > span a,
+#legals .description-cours-li > span.cours-li-result,
+#legals .description-cours-li > span a {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  #singlecours .img-cards,
+#contact .img-cards,
+#association .img-cards,
+#legals .img-cards {
+    width: 100%;
+    height: 30vh;
+    background-image: url("../img/image8.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
+  #singlecours .field,
+#contact .field,
+#association .field,
+#legals .field {
+    flex-direction: column;
+    display: flex;
+  }
+  #singlecours .field > label,
+#contact .field > label,
+#association .field > label,
+#legals .field > label {
+    width: 100%;
+    text-align: center;
+  }
 }
-.header__menu--list {
-  display: flex;
-  list-style: none;
+@media only screen and (min-width: 360px) {
+  .header {
+    width: 100%;
+    height: 8vh;
+    padding: 0 10vw;
+    position: fixed;
+    z-index: 999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #F2F2F2;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
+  .header__menu--list {
+    display: flex;
+    list-style: none;
+  }
+  .header__menu--items > a {
+    margin-right: 1.5em;
+    font-size: 1em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F8FBF1;
+    text-decoration: none;
+  }
+  header > span {
+    display: none;
+  }
 }
-.header__menu--items > a {
-  margin-right: 1.5em;
-  font-size: 1em;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #F2F2F2;
-  text-decoration: none;
-}
-
 footer {
   padding: 100px 0;
 }
@@ -88,7 +342,8 @@ aside {
 }
 
 form {
-  width: 65%;
+  width: 100%;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -99,7 +354,7 @@ form {
 fieldset {
   margin: 1em 0;
   padding: 0.5em;
-  border: 1px solid;
+  border: none;
   border-radius: 0.5em;
 }
 
@@ -110,6 +365,7 @@ legend {
 
 .field {
   display: flex;
+  text-align: left;
   align-items: center;
   padding: 0.5em;
 }
@@ -140,6 +396,7 @@ textarea:focus {
 }
 
 label {
+  font-weight: 600;
   padding: 0;
 }
 
@@ -201,8 +458,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-bottom: 3px solid #e9e9e9;
-  -webkit-text-fill-color: #e9e9e9;
+  border-bottom: 2px solid #1E1F1D;
+  -webkit-text-fill-color: #1E1F1D;
   -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -217,12 +474,12 @@ select:-webkit-autofill:focus {
   border-radius: 6px;
   box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   box-sizing: border-box;
-  color: "Raleway", sans-serif;
+  color: #1E1F1D;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
   line-height: 20px;
   list-style: none;
   padding: 6px 16px;
@@ -234,6 +491,10 @@ select:-webkit-autofill:focus {
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
+}
+
+.button-4 a {
+  font-size: 12px;
 }
 
 .button-4:hover {
@@ -329,8 +590,9 @@ select:-webkit-autofill:focus {
   text-decoration: none;
 }
 
-body {
+* {
   font-size: 16px;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -341,11 +603,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F2F2F2;
-  /*First section*/
-  /*First section end*/
-  /*Second section*/
-  /*Second section end */
+  background-color: #F8FBF1;
 }
 .container section {
   width: 100%;
@@ -376,78 +634,8 @@ body {
   color: #1E1F1D;
   text-decoration: none;
 }
-.container .container__section--first {
-  background-image: url("../img/image1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #E9E9E9;
-  font-family: "Cherry Swash", cursive;
-}
-.container .section__first--masque > h1 {
-  font-size: 68px;
-  font-family: "Cherry Swash", cursive;
-  font-weight: 700;
-  font-style: normal;
-}
-.container .section__first--masque p {
-  font-size: 20px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-}
-.container .section__first--masque {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #E9E9E9;
-}
-.container .container__section--second {
-  width: 90%;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.container .section__second--all {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container .section__second--all button a {
-  color: #1E1F1D;
-  text-decoration: none;
-}
-.container .container__section--third {
-  width: 90%;
-  padding: 100px 0;
-}
-.container .section--presentation-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
-.container .card--presentation {
-  width: 40%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 1em;
-}
-.container .presentation--details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.container img {
+  margin-bottom: 30px;
 }
 
 /*First section*/
@@ -503,50 +691,171 @@ body {
   align-items: center;
 }
 
-#singlecours {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+@media (min-width: 360px) {
+  .container {
+    /*First section*/
+    /*First section end*/
+    /*Presentation start */
+    /* Presentation end */
+  }
+  .container .container__section--first {
+    background-image: url("../img/image1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #E9E9E9;
+    font-family: "Cherry Swash", cursive;
+  }
+  .container .section__first--masque > h1 {
+    font-size: 68px;
+    font-family: "Cherry Swash", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .container .section__first--masque p {
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .container .section__first--masque {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #E9E9E9;
+  }
+  .container .container__section--third {
+    width: 90%;
+    padding: 100px 0;
+  }
+  .container .section--presentation-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .container .card--presentation {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+  }
+  .container .card--presentation .disable {
+    display: flex;
+  }
+  .container .presentation--details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-#singlecours .single-cours-container {
-  width: 60vw;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: start;
+@media (min-width: 361px) {
+  #singlecours,
+#contact,
+#association {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #singlecours .single-cours-container,
+#contact .single-cours-container,
+#association .single-cours-container {
+    width: 60vw;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+  #singlecours .section__second--card-container,
+#contact .section__second--card-container,
+#association .section__second--card-container {
+    justify-content: left;
+  }
+  #singlecours .cards,
+#contact .cards,
+#association .cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    box-shadow: none;
+    margin-bottom: 30px;
+  }
+  #singlecours .card-information-cour,
+#contact .card-information-cour,
+#association .card-information-cour {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #singlecours .description-cours-li,
+#contact .description-cours-li,
+#association .description-cours-li {
+    display: flex;
+    padding: 0 0 1em 1em;
+  }
+  #singlecours .description-cours-li .cours-li-result,
+#contact .description-cours-li .cours-li-result,
+#association .description-cours-li .cours-li-result {
+    display: flex;
+    align-items: center;
+  }
+  #singlecours .description-cours-li .cours-li-result > img,
+#contact .description-cours-li .cours-li-result > img,
+#association .description-cours-li .cours-li-result > img {
+    margin-bottom: 0;
+  }
+  #singlecours .description-cours-li > span,
+#contact .description-cours-li > span,
+#association .description-cours-li > span {
+    text-align: left;
+    margin-left: 1em;
+  }
+  #singlecours .description-cours-li > span.cours-li-result, #singlecours .description-cours-li > span a,
+#contact .description-cours-li > span.cours-li-result,
+#contact .description-cours-li > span a,
+#association .description-cours-li > span.cours-li-result,
+#association .description-cours-li > span a {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  #singlecours .img-cards,
+#contact .img-cards,
+#association .img-cards {
+    width: 100%;
+    height: 30vh;
+    background-image: url("../img/image8.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  }
+  #singlecours .imgtwo,
+#contact .imgtwo,
+#association .imgtwo {
+    background-image: url("../img/image9.jpg");
+  }
+  #singlecours img,
+#contact img,
+#association img {
+    margin-right: 0.5em;
+  }
+  #singlecours iframe,
+#contact iframe,
+#association iframe {
+    padding: 0 0 1em 1em;
+  }
 }
-#singlecours .section__second--card-container {
-  justify-content: left;
-}
-#singlecours .cards {
-  width: 500px;
-  height: auto;
-  display: flex;
-  justify-content: start;
-  box-shadow: none;
-  margin-bottom: 30px;
-}
-#singlecours .card-information-cour {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#singlecours .description-cours-li {
-  display: flex;
-  padding: 0 0 1em 1em;
-}
-#singlecours .description-cours-li > span {
-  text-align: left;
-  margin-left: 1em;
-}
-#singlecours .description-cours-li > span.cours-li-result {
-  font-weight: bold;
-}
-#singlecours iframe {
-  padding: 0 0 1em 1em;
-}
-
 #ordercours {
   display: flex;
   flex-direction: row;
@@ -599,7 +908,7 @@ body {
   font-family: "Cherry Swash", cursive;
   font-size: 1.5em;
   font-weight: 600;
-  color: #F2F2F2;
+  color: #F8FBF1;
   text-decoration: none;
 }
 

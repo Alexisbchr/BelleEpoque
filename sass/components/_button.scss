@@ -10,13 +10,13 @@
   box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, 
   rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   box-sizing: border-box;
-  color: $body-fnt;
+  color: $body-clr;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", 
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
   line-height: 20px;
   list-style: none;
   padding: 6px 16px;
@@ -29,7 +29,9 @@
   white-space: nowrap;
   word-wrap: break-word;
 }
-
+.button-4 a {
+  font-size: 12px;
+}
 .button-4:hover {
   background-color: #F3F4F6;
   text-decoration: none;

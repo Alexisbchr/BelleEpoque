@@ -1,43 +1,75 @@
-#singlecours{
-  display:flex;
-  flex-direction:row;
-  align-items:flex-start;
-  .single-cours-container{
-    width: 60vw;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: start;
-  }
-  .section__second--card-container{
-    justify-content:left;
-  }
-  .cards{
-    width:500px;
-    height:auto;
+@media (min-width:361px){
+  #singlecours,
+  #contact,
+  #association{
     display:flex;
-    justify-content:start;
-    box-shadow:none;
-    margin-bottom: 30px;
-  }
-  .card-information-cour{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-  }
-  .description-cours-li{
-    display:flex;
-    padding: 0 0 1em 1em;
-    & > span{
-      text-align:left;
-      margin-left: 1em;
-    &.cours-li-result{
-      font-weight: bold
+    flex-direction:row;
+    align-items:flex-start;
+    .single-cours-container{
+      width: 60vw;
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: start;
     }
+    
+    .section__second--card-container{
+      justify-content:left;
     }
-  }
-  iframe{
-    padding: 0 0 1em 1em;
+    
+    .cards{
+      width:100%;
+      height:auto;
+      display:flex;
+      justify-content:start;
+      box-shadow:none;
+      margin-bottom: 30px;
+    }
+    
+    .card-information-cour{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    
+    .description-cours-li{
+      display:flex;
+      padding: 0 0 1em 1em;
+      .cours-li-result{
+       display:flex;
+       align-items:center;
+       & > img {
+         margin-bottom: 0;
+       }
+      }
+      & > span{
+        text-align:left;
+        margin-left: 1em;
+        &.cours-li-result, a{
+          font-weight: bold;
+          display: flex;
+          align-items:center;
+          }
+        }
+      }
+    .img-cards{
+      width:100%;
+      height:30vh;
+      background-image: url("../img/image8.jpg");
+      background-position:center;
+      background-size:cover;
+      margin-bottom: 30px;
+      box-shadow:$header-shdw;
+    }
+    .imgtwo{
+      background-image: url("../img/image9.jpg");
+    }
+    img{
+      margin-right: 0.5em;
+    }
+    iframe{
+      padding: 0 0 1em 1em;
+    }
   }
 }

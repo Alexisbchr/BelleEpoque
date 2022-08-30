@@ -1,6 +1,8 @@
-body{
+* {
   font-size: 16px;
+  font-family: $body-fnt;
 }
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -10,7 +12,7 @@ body{
   justify-content: center;
   align-items: center;
   background-color: $white2;
-
+  
   section {
     width: 100%;
     height: auto;
@@ -18,108 +20,29 @@ body{
   .description-cours-li {
     list-style-type: none;
   }
-  h2{
+  h2 {
     text-align: center;
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
-  h3{
+  h3 {
     text-align: center;
     font-size: 1.1em;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 15px;
   }
-  p{
-    text-align:justify;
+  p {
+    text-align: justify;
     margin-bottom: 8px;
   }
-  a{
-    color: $body-clr;
-    text-decoration: none;  
-  }
-  /*First section*/
-  .container__section--first {
-    background-image: url("../img/image1.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: $white;
-    font-family: $logo-fnt;
-  }
-  .section__first--masque > h1 {
-    font-size: 68px;
-    font-family: $logo-fnt;
-    font-weight: 700;
-    font-style: normal;
-  }
-  .section__first--masque p {
-    font-size: 20px;
-    font-family: $body-fnt;
-    font-weight: 700;
-    font-style: normal;
-    text-transform: uppercase;
-  }
-
-  .section__first--masque {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: $white;
-  }
-
-  /*First section end*/
-  /*Second section*/
-  .container__section--second {
-    width: 90%;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .section__second--all {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-    
-  .section__second--all button a{
+  a {
     color: $body-clr;
     text-decoration: none;
   }
-  /*Second section end */
-  
-  .container__section--third{
-    width: 90%;
-    padding: 100px 0;
-  }
-  .section--presentation-container{
-    display:flex;
-    justify-content:center;
-    flex-direction:row;
-  }
-  .card--presentation{
-    width: 40%;
-    height:auto;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    padding: 1em;
-  }
-  .presentation--details{
-    display: flex;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items:center;
+  img {
+    margin-bottom: 30px;
   }
 }

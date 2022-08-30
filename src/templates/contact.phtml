@@ -1,0 +1,47 @@
+<main class="container" id="contact">
+  <section class="single-cours-container">
+    <h2>Contactez-nous!</h2>
+    <div class="section__second--card-container">
+      <div class="cards">
+        <div class="cards-center">
+          <form action="/BelleEpoque/contact" method="post">
+               <fieldset>
+                  <div class="field">
+                     <label for="text">Nom & prénom</label>
+                     <div class="value">
+                        <input type="text" name="text">
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label for="email">Email</label>
+                     <div class="value">
+                        <input type="email" name="email">
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label for="message">Votre message</label>
+                     <div class="value">
+                      <textarea name="message" id="query" required ></textarea> 
+                     </div>
+                  </div>
+               </fieldset>
+               <div class="toolbar">
+                  <button class="button-4" type="submit">Envoyer le mail</button>
+               </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <button class="button-4" role="button">
+        <span class="text">
+          <a href="javascript:history.go(-1)">Retour</a>
+        </span>
+      </button>
+  </section>
+  <?php require './src/includes/_aside.phtml'; ?>
+</main>
+<script>
+ function onSubmit(token) {
+   document.getElementById("demo-form").submit();
+ }
+</script>

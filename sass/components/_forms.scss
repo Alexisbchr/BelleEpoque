@@ -6,7 +6,8 @@
   justify-content: center;
 }
 form {
-  width: 65%;
+  width: 100%;
+  font-size: 16px;
 
   font-family: "Montserrat", sans-serif;
 }
@@ -19,7 +20,7 @@ form {
 fieldset {
   margin: 1em 0;
   padding: 0.5em;
-  border: 1px solid;
+  border:none;
   border-radius: 0.5em;
 }
 
@@ -32,6 +33,7 @@ legend {
 // STYLE FIELD //
 .field {
   display: flex;
+  text-align: left;
   align-items: center;
   padding: 0.5em;
 }
@@ -62,6 +64,7 @@ textarea:focus {
 
 // STYLE LABEL //
 label {
+  font-weight: 600;
   padding: 0;
 }
 // STYLE INPUT //
@@ -118,8 +121,8 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-bottom: 3px solid #e9e9e9;
-  -webkit-text-fill-color: #e9e9e9;
+  border-bottom: 2px solid $body-clr;
+  -webkit-text-fill-color: $body-clr;
   -webkit-box-shadow: 0 0 0px 1000px rgba(29, 29, 29, 0) inset;
   transition: background-color 5000s ease-in-out 0s;
 }

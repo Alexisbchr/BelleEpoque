@@ -8,6 +8,9 @@
 /singlecours/* CoursController:singlecours
 /ordercours CoursController:ordercours
 /ordercours/* CoursController:orderbyletter
+/association PageController:association
+/legals PageController:legals
+/contact ContactController:contact
 /admin AdminController:dashboard
 /admin/addcours AdminController:addcours
 /admin/singlecours/* AdminController:singlecours

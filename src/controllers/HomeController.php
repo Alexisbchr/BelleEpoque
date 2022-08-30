@@ -25,3 +25,4 @@ class HomeController
     return $lastCours; // On renvoi les valeurs pour que index() puissent les utiliser
   }
 }
+?>
