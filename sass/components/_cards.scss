@@ -1,4 +1,4 @@
-.section__second--card-container {
+.section__cards {
   width: 100%;
   height: auto;
   display: flex;
@@ -10,7 +10,7 @@
   
   .cards {
     width: 300px;
-    height: 320px;
+    height: 400px;
     margin: 0.5em;
     flex-direction:column;
     display:flex;
@@ -18,28 +18,74 @@
     justify-content:space-around;
     text-align: center;
     box-shadow: $cards-shdw;
-  }
-  
-  .cards-top {
-    width: 100%;
-  }
-  .cards-top > h3 {
-    padding-top: 0.5em;
-  }
-  
-  .cards-center {
-    width: 100%;
-    &.description-cours-li {
-      list-style-type: none;
-    }
-  }
-  
-  .cards-bottom {
-    width: 100%;
     
-    &.cards-bottom button a {
-      color: $body-clr;
-      text-decoration: none;
+      .img-cards {
+        background-image: url("../img/image11.jpg");
+        margin-right: 0.5em;
+    }
+    
+    
+    .cards__top {
+      width: 100%;
+    }
+    .cards__top > h3 {
+      padding-top: 0.5em;
+    }
+    
+    .cards__center {
+      width: 100%;
+      .cards__ul{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        
+        .cards__li{
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          text-align:center;
+          margin-bottom: 5px;
+          
+            >a{
+              font-weight: bold;
+              display: flex;
+              align-items:center;
+            }
+            
+        >.li__result{
+          display:flex;
+          align-items:center;
+          font-weight: bold;
+          text-align:center;
+          
+            >a{
+              font-weight: bold;
+              display: flex;
+              align-items:center;
+            }
+            
+            > img {
+              margin-bottom: 0;
+            }  
+          }
+          > span{
+            text-align:left;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .cards__bottom {
+      width: 100%;
+      
+      > button a {
+        color: $body-clr;
+        text-decoration: none;
+        font-size: 12px;
+      }
+      .text{
+        margin-left: 0;
+      }
     }
   }
 }

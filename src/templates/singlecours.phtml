@@ -1,22 +1,22 @@
-<main class="container" id="singlecours">
-  <section class="single-cours-container">
+<main class="container" id="aside">
+  <section class="section--second">
     <h2><?= $cours->getTitle();?></h2>
-    <div class="section__second--card-container">
+    <div class="section__cards">
       <div class="cards">
-        <div class="cards-center">
-          <ul class="card-information-cour">
-            <li class="description-cours-li"><span>Compte: </span>
-            <span class="cours-li-result"><?= $cours->getCompte();?></span></li>
-            <li class="description-cours-li"><span>Mur: </span>
-            <span class="cours-li-result"><?= $cours->getMur();?></span></li>
-            <li class="description-cours-li"><span>Niveau: </span>
-            <span class="cours-li-result"><?= $cours->getNiveau();?></span></li>
-            <li class="description-cours-li"><span>Chorégraphe: </span>
-            <span class="cours-li-result"><?= $cours->getChoregraphe();?></span></li>
-            <li class="description-cours-li"><span>Musique: </span>
-            <span class="cours-li-result"><?= $cours->getMusique();?></span></li>
-            <li class="description-cours-li">
-            <span class="cours-li-result"><img src="../img/icons/file_pdf.svg"><a href="<?= $cours->getPdf();?>">
+        <div class="cards__center">
+          <ul class="cards__ul">
+            <li class="cards__li"><span>Compte: </span>
+            <span class="li__result"><?= $cours->getCompte();?></span></li>
+            <li class="cards__li"><span>Mur: </span>
+            <span class="li__result"><?= $cours->getMur();?></span></li>
+            <li class="cards__li"><span>Niveau: </span>
+            <span class="li__result"><?= $cours->getNiveau();?></span></li>
+            <li class="cards__li"><span>Chorégraphe: </span>
+            <span class="li__result"><?= $cours->getChoregraphe();?></span></li>
+            <li class="cards__li"><span>Musique: </span>
+            <span class="li__result"><?= $cours->getMusique();?></span></li>
+            <li class="cards__li">
+            <span class="li__result"><img src="../img/icons/file_pdf.svg"><a href="<?= $cours->getPdf();?>">
               Voir le pdf</a></span></li>
           </ul>
         </div>
@@ -24,6 +24,7 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/<?= $cours->getLien(); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <?php require './src/includes/_navsection.phtml'; ?>
-  </section>
+    
   <?php require './src/includes/_aside.phtml'; ?>
+  </section>
 </main>

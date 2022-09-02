@@ -1,7 +1,7 @@
-@media (min-width: 360px) {
+@media (min-width: 401px) {
   .container {
     /*First section*/
-    .container__section--first {
+    .section--first {
       background-image: url("../img/image1.jpg");
       background-position: center;
       background-size: cover;
@@ -10,14 +10,14 @@
       color: $body-clr;
       font-family: $logo-fnt;
     }
-    .section__first--masque > h1 {
+    .first--masque > h1 {
       font-size: 68px;
       font-family: $logo-fnt;
       font-weight: 700;
       font-style: normal;
       color:$footer-clr;
     }
-    .section__first--masque p {
+    .first--masque p {
       font-size: 20px;
       font-family: $body-fnt;
       font-weight: 700;
@@ -26,7 +26,7 @@
       color:$footer-clr;
     }
 
-    .section__first--masque {
+    .first--masque {
       width: 100%;
       height: 100vh;
       display: flex;
@@ -39,32 +39,46 @@
 
     /*First section end*/
     /*Presentation start */
-    .container__section--third {
+    .section--second {
       width: 90%;
       padding: 100px 0;
-    }
-    .section--presentation-container {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-    }
-    .card--presentation {
-      width: 40%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 1em;
-      .disable{
-        display:flex;
+      
+      .section--article {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .article--content {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        .disable{
+          display:flex;
+        }
+      }
+      .article--details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .article--img{
+        width:100%;
       }
     }
-    .presentation--details {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+    
+    .section--third{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
     }
-    /* Presentation end */
   }
 }

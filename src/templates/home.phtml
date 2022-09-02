@@ -1,19 +1,19 @@
 <main class="container" id="index">
-  <section class="container__section--first">
-    <div class="section__first--masque">
+  <section class="section--first">
+    <div class="first--masque">
       <h1>Belle Époque</h1>
       <p>Association de dance Country & Line</p>
     </div>
   </section>
-  <section class="container__section--third">
+  <section class="section--second">
     <h2>L'association</h2>
-    <div class="section--presentation-container">
-      <article class="card--presentation disable">
-        <img src="./img/image7.jpg" alt="Image d'un bal country" 
-          class="article-image">
+    <div class="section--article">
+      <article class="article--details disable">
+        <img src="./img/image11.jpg" alt="Image d'un bal country" 
+          class="article--img">
       </article>
-      <article class="card--presentation">
-        <div class="presentation--details">
+      <article class="article--details">
+        <div class="article--content">
           <h3>Qui sommes nous?</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, 
             aliquam, modi, laudantium quis velit sed nisi aliquid commodi itaque 
@@ -26,7 +26,7 @@
           </span>
           </button>
         </div>
-        <div class="presentation--details">
+        <div class="article--content">
           <h3>Envie de nous rejoindre?</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, 
             aliquam, modi, laudantium quis velit sed nisi aliquid commodi itaque 
@@ -43,18 +43,16 @@
       </article>
     </div>
   </section>
-  <section class="container__section--second">
+  <section class="section--third">
     <h2>Derniers cours mis en ligne</h2>
-    <div class="section__second--card-container">
       <?php 
         require './src/includes/_lastcours.phtml';
-        ?>
-    </div>
+      ?>
       <button class="button-4" role="button">
       <span class="text">
       <a href="/BelleEpoque/allcours">Parcourir tous les cours</a> 
       </span>
       </button>
-      <?php require './src/includes/_navsection.phtml'; ?>
   </section>
+      <?php require './src/includes/_navsection.phtml'; ?>
 </main>
