@@ -17,3 +17,5 @@
 /admin/editcours/* AdminController:editcours
 /admin/deletecours/* AdminController:deletecours
 /admin/allcours AdminController:allcours
+/admin/ordercours AdminController:ordercours
+/admin/ordercours/* AdminController:orderbyletter

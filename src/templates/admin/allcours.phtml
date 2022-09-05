@@ -1,7 +1,10 @@
-<main class="container" id="allcours">
-  <section class="container__section--second">
+<main class="container" id="dashboard">
+  <section class="section--second">
     <h2>Tous les cours</h2>
-    <div class="section__second--card-container">
+     <?php
+       include './src/includes/_admnavletter.phtml';
+      ?>
+    <div class="section__cards">
       <?php
         foreach($allCours as $cours)
         {
@@ -20,7 +23,7 @@
           </ul>
         </div>
         <div class="cards-bottom">
-          <button>
+          <button class="button-4">
           <a href="/BelleEpoque/admin/singlecours/<?= $cours['id'] ?>">Voir le cours</a>
           </button>
         </div>

@@ -1,27 +1,25 @@
 <main class="container" id="index">
-   <section class="section--first">
-      <div class="first--masque">
-            <form action="/BelleEpoque/logincheck" method="post">
-               <fieldset>
-                  <legend>Administration</legend>
-                  <div class="field">
-                     <label for="username">Nom d'utilisateur</label>
-                     <div class="value">
-                        <input type="text" name="username">
-                     </div>
-                  </div>
-                  <div class="field">
-                     <label for="password">Mot de passe</label>
-                     <div class="value">
-                        <input type="password" name="password">
-                     </div>
-                  </div>
-               </fieldset>
-               <div class="toolbar">
-                  <button type="submit" class="button">Se connecter</button>
+   <section class="section--second">
+      <form action="/BelleEpoque/logincheck" method="post">
+         <fieldset>
+            <legend>Administration</legend>
+            <div class="field">
+               <label for="username">Nom d'utilisateur</label>
+               <div class="value">
+                  <input type="text" name="username">
                </div>
-            </form>
-      </div>
+            </div>
+            <div class="field">
+               <label for="password">Mot de passe</label>
+               <div class="value">
+                  <input type="password" name="password">
+               </div>
+            </div>
+         </fieldset>
+         <div class="toolbar">
+            <button type="submit" class="button-4">Se connecter</button>
+         </div>
+      </form>
       <?php require './src/includes/_navsection.phtml'; ?>
    </section>
 </main>

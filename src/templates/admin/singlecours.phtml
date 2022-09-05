@@ -1,28 +1,42 @@
-<main class="container" id="singlecours">
-  <section class="container__section--second">
+<main class="container" id="dashboard">
+  <section class="section--second">
     <h2><?= $cours->getTitle();?></h2>
-    <div class="section__second--card-container">
-      <div class="cards">
-        <div class="cards-top">
-          <h3><?= $cours->getTitle();?></h3>
-        </div>
-        <div class="cards-center">
-          <ul class="card-information-cour">
-            <li class="description-cours-li">Compte: <?= $cours->getCompte();?></li>
-            <li class="description-cours-li">Mur:<?= $cours->getMur();?></li>
-            <li class="description-cours-li">Niveau: <?= $cours->getNiveau();?></li>
-            <li class="description-cours-li">Chorégraphe: <?= $cours->getChoregraphe();?></li>
-            <li class="description-cours-li">Musique: <?= $cours->getMusique();?></li>
+    <div class="section__cards">
+      <div class="cards nobox">
+        <div class="cards__center">
+          <ul class="cards__ul">
+            <li class="cards__li"><span>Compte: </span>
+            <span class="li__result"><?= $cours->getCompte();?></span></li>
+            <li class="cards__li"><span>Mur: </span>
+            <span class="li__result"><?= $cours->getMur();?></span></li>
+            <li class="cards__li"><span>Niveau: </span>
+            <span class="li__result"><?= $cours->getNiveau();?></span></li>
+            <li class="cards__li"><span>Chorégraphe: </span>
+            <span class="li__result"><?= $cours->getChoregraphe();?></span></li>
+            <li class="cards__li"><span>Musique: </span>
+            <span class="li__result"><?= $cours->getMusique();?></span></li>
+            <li class="cards__li"><span>Niveau: </span>
+            <span class="li__result"><?= $cours->getNiveau();?></span></li>
+            <li class="cards__li"><span>Lien YouTube: </span>
+            <span class="li__result"><?= $cours->getLien();?></span></li>
+            <li class="cards__li"><span>PDF: </span>
+            <span class="li__result"><?= $cours->getPdf();?></span></li>
+            <li class="cards__li">
+            <span class="li__result"><img src="../../img/icons/file_pdf.svg"><a href="<?= $cours->getPdf();?>">
+              Voir le pdf</a></span></li>
           </ul>
         </div>
         <div class="cards-bottom">
-          <button>
+          <button class="button-4">
             <a href="/BelleEpoque/admin/editcours/<?= $cours->getId(); ?>">Modifier le cours</a>
           </button>
-          <button>
+          <button class="button-4">
             <a href="/BelleEpoque/admin/deletecours/<?= $cours->getId(); ?>">Supprimer le cours</a>
           </button>
+        </div>
       </div>
-    </div>       
+    </div>
+    
+    <?php require './src/includes/_navsection.phtml'; ?>
   </section>
 </main>

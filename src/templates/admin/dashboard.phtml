@@ -1,20 +1,27 @@
 <main class="container" id="dashboard">
-   <section class="container__section--first">
-      <div class="section__first--masque">
-      <h2>Bienvenue <?php $_SESSION['user'] ?></h2>
-      <div class="cards">
-        <div class="cards-top">
-          <h3>Gerer les cours</h3>
-        </div>
-        <div class="cards-center">
-          <ul class="description-cours-ul">
+  <section class="section--second">
+      <h2>Bienvenue <?php $_SESSION['user']; ?></h2>
+      <div class="section--article">
+        <article class="article--details">
+           <h3>Gerer les cours</h3>
+          <div class="article--content">
+            <ul class="description-cours-ul">
             <li class="description-cours-li">
               <a href="/BelleEpoque/admin/addcours">Ajouter un cours</a></li>
             <li class="description-cours-li">
               <a href="/BelleEpoque/admin/allcours">Voir les cours</a></li>
           </ul>
-        </div>
+          </div>
+        </article>
+        <article class="article--details">
+           <h3>Gerer le compte</h3>
+          <div class="article--content">
+            <ul class="description-cours-ul">
+            <li class="description-cours-li">
+              <a href="/BelleEpoque/admin/addcours">Se deconnecter</a></li>
+          </ul>
+          </div>
+        </article>
       </div>
-    </div>
   </section>
 </main>
