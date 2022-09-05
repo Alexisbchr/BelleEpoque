@@ -125,7 +125,7 @@ class CoursManager
         $db=$this->db;
         $query = $db->prepare(
         'UPDATE cours SET title=:title, compte=:compte, mur=:mur, niveau=:niveau,
-        choregraphe=:choregraphe, musique=:musique, lien=:lien, pdf=:pdf WHERE id=:id');
+        choregraphe=:choregraphe, musique=:musique, id=:id, lien=:lien, pdf=:pdf WHERE id=:id');
         $parameters = [
           'title' => $title,
           'compte' => $compte,

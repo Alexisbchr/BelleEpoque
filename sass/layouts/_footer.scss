@@ -5,7 +5,14 @@
   .footer__header{
     margin-bottom: 30px;
     text-align:center;
-    >p,h2{
+    >h2{
+      color:$footer-clr;
+    }
+  }
+  .footer__main{
+    margin-bottom: 30px;
+    text-align:center;
+    > p, i{
       color:$footer-clr;
     }
   }

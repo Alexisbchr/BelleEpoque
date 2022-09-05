@@ -57,6 +57,7 @@ class AuthentificationController
   {
       $page = "logout";
       $pageName = "Déconnexion";
-      require "./src/templates/layout.phtml";
+      header('Location: /BelleEpoque/login');
+      exit;
   }
 }    

@@ -39,8 +39,8 @@
           <label for="musique">Musique</label>
           <div class="value">
             <input type="text" name="musique" value="<?= $cours->getMusique(); ?>">
+            <input type="hidden" name="id" value="<?= $cours->getId(); ?>">
           </div>
-          <input type="hidden" name="id" value="<?= $cours->getId(); ?>">
         </div>
         <div class="field">
           <label for="lien">Lien</label>

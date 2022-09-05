@@ -17,6 +17,7 @@
   section {
     width: 100%;
     height: auto;
+    
   }
   .description-cours-li {
     list-style-type: none;
@@ -54,5 +55,7 @@
     .text{
       margin-left: 0;
     }
-  
+   .img--second{
+         background-image: url("../img/image11.jpg");
+      }
 }

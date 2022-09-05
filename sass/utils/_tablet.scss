@@ -1,0 +1,226 @@
+@media (min-width: 401px) and (max-width: 992px){
+  #index .container{
+    // padding: 0;
+  }
+  .container{
+  }
+  /* Header start */
+  .header{
+    display:flex;
+    justify-content:center;
+    width: 100%;
+    height: 13vh;
+    padding: 0 10vw;
+    position: fixed;
+    z-index:999999;
+    align-items: center;
+    color: #F2F2F2;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: $header-shdw;
+  }
+  .header__logo{
+    width:60%;
+    display:flex;
+    justify-content:center;
+  }
+  .header__menu{
+    display:flex;
+    flex-direction:column;
+  }
+  .header__menu--list{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color: $white-opacity;
+  }
+  .header__menu--list{
+    display: none;
+    position:fixed;
+    
+    list-style: none;
+    width:100vw;
+    height:100vh;
+  }
+  .header__menu--items{
+    margin-bottom: 1.3em;
+  }
+ .header__menu--items > a{
+    font-size: 1em;
+    font-family: $body-fnt;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white2;
+    text-decoration: none;
+    } 
+  .openMenu>i{
+    color:$white;
+    display:flex;
+    justify-content:right;
+    text-align:right;
+  }
+  /*Header end*/
+  /*First section*/
+  .section--first{
+    background-image: url("../img/image1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $body-clr;
+    font-family: $logo-fnt;
+  }
+  .first--masque > h1 {
+    font-size: 2em;
+    font-family: $logo-fnt;
+    font-weight: 700;
+    font-style: normal;
+    color:$footer-clr;
+  }
+  .first--masque p {
+    font-size: 0.8em;
+    font-family: $body-fnt;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    color:$footer-clr;
+  }
+  .first--masque {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $white;
+  }
+
+  /*First section end*/
+  /* Presentation section start */
+  .section--second{
+    width: 100%;
+    padding: 100px 0 0 0;
+  }
+  .section--article{
+    display:flex;
+    justify-content:center;
+    flex-direction:row;
+  }
+  .article--details{
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding: 1em;
+  }
+  .disable{
+      display:none;
+    }
+  .article--content{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+  }
+  /* Presentation section end */
+  /*Second section*/
+  .section--third {
+    width: 100%;
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+      justify-content:center;
+      align-items:center;
+  }
+
+  .section__second--all {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  .section--third button a{
+    color: $body-clr;
+    text-decoration: none;
+  }
+  /*Second section end */
+  aside{
+    display:none;
+  }
+  #aside{
+    display:flex;
+    flex-direction:row;
+    align-items:flex-start;
+    
+    .section--second{
+      width:100%;
+      align-items:center;
+      padding: 100px 10px 100px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  .cards{
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:start;
+    box-shadow:none;
+    margin-bottom: 30px;
+  
+    
+    .card-information-cour{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+    
+    .description-cours-li{
+      display:flex;
+      align-items:center;
+      padding: 0 0 1em 0;
+      .cours-li-result{
+       display:flex;
+       align-items:center;
+       text-align:center;
+       & > img {
+         margin-bottom: 0;
+       }
+      }
+      & > span{
+        text-align:left;
+        margin-left: 1em;
+        &.cours-li-result, a{
+          font-weight: bold;
+          display: flex;
+          align-items:center;
+          }
+        }
+      }
+    .cards--img{
+      width:100%;
+      height:30vh;
+      background-image: url("../img/image8.jpg");
+      background-position:center;
+      background-size:cover;
+      margin-bottom: 30px;
+      box-shadow:$header-shdw;
+      }
+      .field{
+        flex-direction: column;
+        display: flex;
+        >label{
+          width:100%;
+          text-align:center;
+        }
+      }
+      >.img--second{
+         background-image: url("../img/image11.jpg");
+      }
+    }
+  }
+}

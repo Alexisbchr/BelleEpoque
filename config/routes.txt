@@ -19,3 +19,4 @@
 /admin/allcours AdminController:allcours
 /admin/ordercours AdminController:ordercours
 /admin/ordercours/* AdminController:orderbyletter
+/admin/logout AuthentificationController:logout
