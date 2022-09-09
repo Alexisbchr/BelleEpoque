@@ -35,7 +35,8 @@ class CoursController
       $previousFirstLetter = null;
       $j = 0;
       for($i = 0, $max = count($orderCoursByLetter); $i < $max; $i++){
-        $orderCoursByLetter[$i]['title']." Premier Char : ".strtoupper(substr($orderCoursByLetter[$i]['title'],0,1));
+        $orderCoursByLetter[$i]['title']." Premier Char : ".
+        strtoupper(substr($orderCoursByLetter[$i]['title'],0,1));
         $title = $orderCoursByLetter[$i]['title'];
         $id = $orderCoursByLetter[$i]['id'];
         $firstLetter = strtoupper(substr($orderCoursByLetter[$i]['title'],0,1));

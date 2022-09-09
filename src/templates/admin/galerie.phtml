@@ -16,20 +16,25 @@
        <div class="cards__bottom">
           <button class="button-4" role="button">
               <span class="text">
-              <a href="/BelleEpoque/admin/galerie/<?= $image['id'] ?>">Modifier l'image</a> 
+              <a href="/BelleEpoque/admin/galerie/<?= $image['id'] ?>">Modifier l'image</a>
               </span>
           </button>
           <button class="button-4" role="button">
               <span class="text">
-              <a href="/BelleEpoque/admin/singleimage/<?= $image['id'] ?>">voir l'image</a> 
+              <a href="/BelleEpoque/admin/singleimage/<?= $image['id'] ?>">voir l'image</a>
+              </span>
+          </button>
+          <button class="button-4" role="button">
+              <span class="text">
+              <a href="/BelleEpoque/admin/deleteimage/<?= $image['id'] ?>">supprimer l'image</a>
               </span>
           </button>
         </div>
       </div>
-     
+
       <?php
         }
-      ?>        
+      ?>
     </div>
     <?php require './src/includes/_navsection.phtml'; ?>
   </section>

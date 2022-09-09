@@ -14,7 +14,9 @@ class ImagesManager
 		 */
 		public function __construct()
 		{
-				$this->db = new PDO('mysql:host=db.3wa.io;port=3306;dbname=beucheralexis_belle_epoque', 'beucheralexis', '6e8483129fd777c045a2009608fa54d9');
+				$this->db = new PDO('mysql:host=db.3wa.io;
+				port=3306;dbname=beucheralexis_belle_epoque',
+				'beucheralexis', '6e8483129fd777c045a2009608fa54d9');
 		}
 
 		/**
@@ -39,14 +41,16 @@ class ImagesManager
 						{
 								if (isset($_POST['addimage']))
 								{
-										$dataImage = ['img_lien' => 'images/' . $_FILES['image']['name'], 'img_file' => $_FILES['image']['tmp_name']];
+										$dataImage = ['img_lien' => 'images/' . $_FILES['image']['name'],
+										'img_file' => $_FILES['image']['tmp_name']];
 
-										$data = ['title' => htmlspecialchars($_POST['title']) , 'img_lien' => $dataImage['img_lien']];
+										$data = ['title' => htmlspecialchars($_POST['title']) ,
+										'img_lien' => $dataImage['img_lien']];
 
 										move_uploaded_file($dataImage['img_file'], $dataImage['img_lien']);
 
 										$db = $this->db;
-										$query = $db->prepare('INSERT INTO images (title, lien) 
+										$query = $db->prepare('INSERT INTO images (title, lien)
 					VALUES (:title, :img_lien)');
 										$query->execute($data);
 								}
@@ -72,16 +76,30 @@ class ImagesManager
 										return $images;
 
 								}
+                 private function generateFileName() : string
+                    {
+                        $randomString = bin2hex(random_bytes(10)); // random string, 20 characters a-z 0-9
+
+                        return $randomString;
+                    }
 
 								public function editimage(int $id, string $title, string $lien)
 								{
-										var_dump($lien);
-
 										$db = $this->db;
 										$query = $db->prepare('UPDATE images SET id=:id, title=:title, lien=:img_lien WHERE id=:id');
 										$parameters = ['id' => $id, 'title' => $title, 'img_lien' => $lien];
 										$query->execute($parameters);
 										header('Location: /BelleEpoque/admin');
 								}
+								public function deleteimage(int $id)
+            		{
+            			$db=$this->db;
+            			$query = $db->prepare('DELETE FROM images WHERE id=:id');
+            			$parameters = [
+            				'id' => $id
+            			];
+            			$query->execute($parameters);
+            			include './src/includes/_success.phtml';
+            		}
 						}
-						
+

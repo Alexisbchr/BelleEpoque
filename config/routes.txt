@@ -25,4 +25,5 @@
 /admin/ordercours/* AdminController:orderbyletter
 /admin/addimage ImagesController:addimage
 /admin/singleimage/* AdminController:singleimage
+/admin/deleteimage/* AdminController:deleteimage
 /admin/logout AuthentificationController:logout
