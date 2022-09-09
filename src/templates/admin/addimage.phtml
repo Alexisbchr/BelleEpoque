@@ -1,0 +1,24 @@
+<main class="container" id="dashboard">
+  <section class="section--second">
+      <form action="/BelleEpoque/admin/addimage" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Ajouter une photo</legend>
+          <div class="field">
+            <label for="title">Titre de la photo</label>
+            <div class="value">
+              <input type="text" name="title" id="title">
+            </div>
+          </div>
+          <div class="field">
+            <label for="image">Choisir une photo</label>
+            <div class="value">
+              <input type="file" accept="image/png, image/jpeg" name="image">
+            </div>
+          </div>
+        </fieldset>
+        <div class="toolbar">
+          <button type="submit" class="button-4" name="addimage">Importer une photo</button>
+        </div>
+      </form>
+  </section>
+</main>

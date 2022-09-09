@@ -18,6 +18,7 @@ class AuthentificationController
   * logincheck() is a function allowing the route and who checking the form
   * of login and who verifies the data in DataBase
   */
+  
   public function logincheck()
   {
 

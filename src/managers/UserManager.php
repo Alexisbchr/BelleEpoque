@@ -34,6 +34,9 @@ class UserManager
         $this->db = $db;
     }
     
+    // Vérifier le mdp hash
+    
+    
     // Acceder aux user
     
     public function getUserById(int $id) : User 

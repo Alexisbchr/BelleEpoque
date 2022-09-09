@@ -1,0 +1,36 @@
+<main class="container" id="index">
+  <section class="section--second">
+    <h2>Tous les cours</h2>
+    <div class="section__cards">
+      <?php
+        foreach($images as $image)
+        {
+      ?>
+      <div class="cards ">
+       <div class="cards__top">
+          <h3><?= $image['title']; ?></h3>
+       </div>
+       <div class="cards__center cards--photo">
+         <img src="/BelleEpoque/<?= $image['lien']; ?>" alt="<?= $image['title']; ?>">
+       </div>
+       <div class="cards__bottom">
+          <button class="button-4" role="button">
+              <span class="text">
+              <a href="/BelleEpoque/admin/galerie/<?= $image['id'] ?>">Modifier l'image</a> 
+              </span>
+          </button>
+          <button class="button-4" role="button">
+              <span class="text">
+              <a href="/BelleEpoque/admin/singleimage/<?= $image['id'] ?>">voir l'image</a> 
+              </span>
+          </button>
+        </div>
+      </div>
+     
+      <?php
+        }
+      ?>        
+    </div>
+    <?php require './src/includes/_navsection.phtml'; ?>
+  </section>
+</main>

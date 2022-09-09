@@ -10,6 +10,7 @@ require "./src/controllers/AdminController.php";
 require "./src/controllers/CoursController.php";
 require './src/controllers/PageController.php';
 require './src/controllers/ContactController.php';
+require './src/controllers/ImagesController.php';
 require "./src/services/Router.php";
 
 $routes = [];

@@ -8,6 +8,8 @@
 /singlecours/* CoursController:singlecours
 /ordercours CoursController:ordercours
 /ordercours/* CoursController:orderbyletter
+/galerie ImagesController:galerie
+/galerie/* ImagesController:singleimage
 /association PageController:association
 /legals PageController:legals
 /contact ContactController:contact
@@ -15,8 +17,12 @@
 /admin/addcours AdminController:addcours
 /admin/singlecours/* AdminController:singlecours
 /admin/editcours/* AdminController:editcours
+/admin/galerie AdminController:galerie
+/admin/galerie/* AdminController:editImage
 /admin/deletecours/* AdminController:deletecours
 /admin/allcours AdminController:allcours
 /admin/ordercours AdminController:ordercours
 /admin/ordercours/* AdminController:orderbyletter
+/admin/addimage ImagesController:addimage
+/admin/singleimage/* AdminController:singleimage
 /admin/logout AuthentificationController:logout

@@ -1,0 +1,17 @@
+<main class="container" id="dashboard">
+  <section class="section--second">
+    <h2><?= $image->getTitle();?></h2>
+    <div class="section__cards">
+      
+             <img src="/BelleEpoque/<?= $image->getLien(); ?>" alt="">
+          
+    </div>
+    <button class="button-4">
+            <a href="/BelleEpoque/admin/galerie/<?= $image->getId(); ?>">Modifier le cours</a>
+          </button>
+          <button class="button-4">
+            <a href="/BelleEpoque/admin/galerie/<?= $image->getId(); ?>">Supprimer le cours</a>
+          </button>
+    <?php require './src/includes/_navsection.phtml'; ?>
+  </section>
+</main>
