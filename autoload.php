@@ -1,17 +1,21 @@
 <?php
-// Notre fichier autoload.php que nous plaçons à la racine du projet va nous 
+// Notre fichier autoload.php que nous plaçons à la racine du projet va nous
 // permettre de faire deux choses :
 // faire des require des controllers et du routeur
 // charger la liste des routes depuis notre fichier de configuration
+require "./src/services/Router.php";
+
+require './src/managers/AbstractManager.php';
+
+require "./src/controllers/AbstractController.php";
 require "./src/controllers/HomeController.php";
-require "./src/controllers/BlogController.php";
 require "./src/controllers/AuthentificationController.php";
 require "./src/controllers/AdminController.php";
 require "./src/controllers/CoursController.php";
 require './src/controllers/PageController.php';
 require './src/controllers/ContactController.php';
 require './src/controllers/ImagesController.php';
-require "./src/services/Router.php";
+
 
 $routes = [];
 
@@ -36,7 +40,7 @@ if ($handle) { // if the file exists
                 $route["parameter"] = true; // the route expects a parameter
                 $pathData = explode("/", $route["path"]); // divide the path in three strings (cut at the "/")
                 $route["path"] = substr($route["path"], 0, -2); // isolate the path without the parameters
-                
+
             }
             else
             {
@@ -74,12 +78,12 @@ if ($handle) { // if the file exists
 //         // diviser la ligne en deux string (division à partir des " ")
 //         $routeData = explode(" ", str_replace(PHP_EOL, '', $line));
 //         // le chemin est ce qui est avant le ""
-//         $route["path"] = $routeData[0]; 
+//         $route["path"] = $routeData[0];
 //         // on vérifie si la chaine du chemin a plus de 1 /
-//         if(substr_count($route["path"], "/") > 1) 
+//         if(substr_count($route["path"], "/") > 1)
 //         {
 //             // la route a besoin d'un paramètre
-//             $route["parameter"] = true; 
+//             $route["parameter"] = true;
 //             // on divise la route en 3 strings (a partir de "/" )
 //             $pathData = explode("/", $route["path"]);
 //             // on isole la route sans le paramètre
@@ -91,11 +95,11 @@ if ($handle) { // if the file exists
 //             $route["parameter"] = false;
 //         }
 //         // la string du controller est ce qu'il y a apres ";"
-//         $controllerString = $routeData[1]; 
+//         $controllerString = $routeData[1];
 //         // on divise la string du controller en deux string (à partir du ":")
 //         $controllerData = explode(":", $controllerString);
 //         // le controller est ce qu'il y a avant le ":"
-//         $route["controller"] = $controllerData[0]; 
+//         $route["controller"] = $controllerData[0];
 //         // la méthode est ce qu'il y a après le ":"
 //         $route["method"] = $controllerData[1];
 //         // ajoute la nouvelle route au tableau des routes

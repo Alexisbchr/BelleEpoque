@@ -1,19 +1,19 @@
-
 /* CSS */
+
 .button-4 {
-  max-width: 200px;
+  width: 200px;
   margin: 15px 0 15px 0;
   appearance: none;
   background-color: #FAFBFC;
   border: 1px solid rgba(27, 31, 35, 0.15);
   border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, 
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
   rgba(255, 255, 255, 0.25) 0 1px 0 inset;
   box-sizing: border-box;
   color: $body-clr;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", 
+  font-family: -apple-system, system-ui, "Segoe UI",
   Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-weight: 600;
   text-transform: uppercase;
@@ -28,7 +28,7 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
-  
+
   .button-4 a {
     font-size: 12px;
   }
@@ -37,28 +37,28 @@
     text-decoration: none;
     transition-duration: 0.1s;
   }
-  
+
   .button-4:disabled {
     background-color: #FAFBFC;
     border-color: rgba(27, 31, 35, 0.15);
     color: #959DA5;
     cursor: default;
   }
-  
+
   .button-4:active {
     background-color: #EDEFF2;
     box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
     transition: none 0s;
   }
-  
+
   .button-4:focus {
     outline: 1px transparent;
   }
-  
+
   .button-4:before {
     display: none;
   }
-  
+
   .button-4:-webkit-details-marker {
     display: none;
   }
@@ -66,7 +66,7 @@
     text-align: center;
     &.cours-li-result,
     a {
-    font-size: 12px;
+      font-size: 12px;
       margin-top: 1px;
       font-weight: bold;
       display: flex;
@@ -74,11 +74,94 @@
     }
   }
   button a {
-      color: $body-clr;
-      text-decoration: none;
+    color: $body-clr;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .text {
+    margin-left: 0;
+  }
+}
+
+.button-3 {
+  width: 50px;
+  margin: 15px 0 15px 0;
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+  rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: $body-clr;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI",
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+
+  .button-3 a {
+    font-size: 12px;
+  }
+  .button-3:hover {
+    background-color: #F3F4F6;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+
+  .button-3:disabled {
+    background-color: #FAFBFC;
+    border-color: rgba(27, 31, 35, 0.15);
+    color: #959DA5;
+    cursor: default;
+  }
+
+  .button-3:active {
+    background-color: #EDEFF2;
+    box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+    transition: none 0s;
+  }
+
+  .button-3:focus {
+    outline: 1px transparent;
+  }
+
+  .button-3:before {
+    display: none;
+  }
+
+  .button-3:-webkit-details-marker {
+    display: none;
+  }
+  >span .text {
+    text-align: center;
+    &.cours-li-result,
+    a {
       font-size: 12px;
+      margin-top: 1px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
     }
-    .text{
-      margin-left: 0;
-    }
+  }
+  button a {
+    color: $body-clr;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .text {
+    margin-left: 0;
+  }
 }

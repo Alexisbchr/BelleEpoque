@@ -1,6 +1,6 @@
 <?php
 /**
-* This file contain all fonctions who display images 
+* This file contain all fonctions who display images
 */
 class ImagesController
 {
@@ -10,7 +10,7 @@ class ImagesController
         $page = "addimage";
         $pageName = "Ajouter une photo";
         require_once './src/managers/ImagesManager.php';
-        
+
         $imagesManager = new ImagesManager;
         $image = $imagesManager->addimage();
         require_once "./src/templates/admin/admlayout.phtml";
@@ -18,7 +18,7 @@ class ImagesController
       else{
        header('Location: login');
        exit;
-      } 
+      }
     }
      public function galerie()
     {

@@ -4,12 +4,14 @@
     <?php
       include './src/includes/_navletter.phtml';
     ?>
-    <div class="section__cards">
+    <label for="search">Rechercher un cours par son titre : </label>
+		<input type="text" id="search">
+    <section class="section__cards" id="target">
       <?php
         foreach($allCours as $cours)
         {
       ?>
-      <div class="cards">
+      <article class="cards">
         <div class="cards__top">
           <h3><?= $cours['title'];?></h3>
         </div>
@@ -20,7 +22,7 @@
             <li class="cards__li"><span>Mur: </span>
             <span class="li__result"><?= $cours['mur'];?></span></li>
             <li class="cards__li"><span>Niveau: </span>
-            <span class="li__result"><?= $cours['niveau'];?></li>
+            <span class="li__result"><?= $cours['name'];?></li>
             <li class="cards__li"><span>Chorégraphe: </span>
             <span class="li__result"><?= $cours['choregraphe'];?></span></li>
             <li class="cards__li"><span>Musique: </span>
@@ -30,15 +32,16 @@
         <div class="cards__bottom">
           <button class="button-4" role="button">
               <span class="text">
-              <a href="/BelleEpoque/singlecours/<?= $cours['id'] ?>">Voir le cours</a> 
+              <a href="/BelleEpoque/singlecours/<?= $cours['id'] ?>">Voir le cours</a>
               </span>
           </button>
         </div>
-      </div>
+      </article>
       <?php
         }
-      ?>        
-    </div>
+      ?>
+    </section>
+    <?php require './src/includes/_navpages.phtml'; ?>
     <?php require './src/includes/_navsection.phtml'; ?>
   </section>
 </main>

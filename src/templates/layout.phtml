@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BelleEpoque/css/style.css" type="text/css" />
     <title>Belle-Epoque ~ <?= $pageName ?></title>
-    <meta nаmе="dеѕсrірtіоn" соntеnt="Belle Epoque est une association de danse 
+    <meta nаmе="dеѕсrірtіоn" соntеnt="Belle Epoque est une association de danse
     country et line danse située à SAINT-OUEN-DES-TOITS. Venez découvrir notre passion! ">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
     integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/snf0qvh.css">
@@ -17,15 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id = "fb-root" ></div> <script async defer crossorigin = " anonymous" 
-    src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v14.0" nonce = "K6dn9P75" ></script> 
-    <?php 
+
+    <div id = "fb-root" ></div> <script async defer crossorigin = " anonymous"
+    src = "https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v14.0" nonce = "K6dn9P75" ></script>
+    <?php
       include './src/includes/_header.phtml';
-      require './src/templates/'.$page.'.phtml'; 
+      require './src/templates/'.$page.'.phtml';
     ?>
     <script src="https://kit.fontawesome.com/b352077b4f.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="main.js"></script>
-    <?php 
+    <script src="/BelleEpoque/js/searchlesson.js"></script>
+    <script src="/BelleEpoque/js/burger.js"></script>
+    <?php
       require './src/includes/_footer.phtml';
     ?>
   </body>

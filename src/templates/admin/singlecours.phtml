@@ -1,7 +1,7 @@
 <main class="container" id="dashboard">
   <section class="section--second">
     <h2><?= $cours->getTitle();?></h2>
-    <div class="section__cards">
+    <article class="section__cards">
       <div class="cards nobox">
         <div class="cards__center">
           <ul class="cards__ul">
@@ -10,13 +10,11 @@
             <li class="cards__li"><span>Mur: </span>
             <span class="li__result"><?= $cours->getMur();?></span></li>
             <li class="cards__li"><span>Niveau: </span>
-            <span class="li__result"><?= $cours->getNiveau();?></span></li>
+            <span class="li__result"><?= $cours->getName();?></span></li>
             <li class="cards__li"><span>Chorégraphe: </span>
             <span class="li__result"><?= $cours->getChoregraphe();?></span></li>
             <li class="cards__li"><span>Musique: </span>
             <span class="li__result"><?= $cours->getMusique();?></span></li>
-            <li class="cards__li"><span>Niveau: </span>
-            <span class="li__result"><?= $cours->getNiveau();?></span></li>
             <li class="cards__li"><span>Lien YouTube: </span>
             <span class="li__result"><?= $cours->getLien();?></span></li>
             <li class="cards__li"><span>PDF: </span>
@@ -35,8 +33,8 @@
           </button>
         </div>
       </div>
-    </div>
-    
+    </article>
+
     <?php require './src/includes/_navsection.phtml'; ?>
   </section>
 </main>

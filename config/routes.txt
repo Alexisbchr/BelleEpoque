@@ -7,6 +7,7 @@
 /allcours CoursController:allcours
 /singlecours/* CoursController:singlecours
 /ordercours CoursController:ordercours
+/coursfind CoursController:searchLesson
 /ordercours/* CoursController:orderbyletter
 /galerie ImagesController:galerie
 /galerie/* ImagesController:singleimage

@@ -1,39 +1,40 @@
 // Fonts Family
-
-    $body-fnt : 'Raleway', sans-serif;
-    $logo-fnt : 'Cherry Swash', cursive;
+$body-fnt: 'Raleway',
+sans-serif;
+$logo-fnt: 'Cherry Swash',
+cursive;
 
 //Colors
-    $primary:#2b2d42;
-    $white-opacity : rgba(0, 0, 0, 0.2);
-    $white : #edf2f4;
-    $white2 : #edf2f4;
-    $dark-grey: #1E1F1D;
-    $light-grey: #ADADAD;
-    $light2x-grey: #DBDBDB;
-    $light-blue: #B6D7E2ff;
-    $uranian-blue: #B7E4F9ff;
-    $bistre: #3C2712ff;
-    $bright-navy-blue: #277AD7ff;
-    $aero: #75BDEBff;
+$primary:#2b2d42;
+$white-opacity: rgba(0, 0, 0, 0.2);
+$white-opacity2: rgba(0, 0, 0, 0.6);
+$white: #edf2f4;
+$white2: #edf2f4;
+$dark-grey: #1E1F1D;
+$light-grey: #ADADAD;
+$light2x-grey: #DBDBDB;
+$light-blue: #B6D7E2ff;
+$uranian-blue: #B7E4F9ff;
+$bistre: #3C2712ff;
+$bright-navy-blue: #277AD7ff;
+$aero: #75BDEBff;
 
 
 //Bgc
-    $header-bgc: rgba(43, 45, 66, 0.8);
-    $body-bgc: #edf2f4;
-    $footer-bgc:#2b2d42;
+$header-bgc: rgba(43, 45, 66, 0.8);
+$body-bgc: #edf2f4;
+$footer-bgc:#2b2d42;
 
 //Fonts Colors
-    
-    $body-clr : #2b2d42;
-    $header-a-clr : #edf2f4;
-    $section-title-clr : #E9E9E9;
-    $cards-clr: #2b2d42;
-    $footer-clr:#edf2f4;
+$body-clr: #2b2d42;
+$header-a-clr: #edf2f4;
+$section-title-clr: #E9E9E9;
+$cards-clr: #2b2d42;
+$footer-clr:#edf2f4;
 
 //Box Shadows
-
-    $cards-shdw: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      rgba(0, 0, 0, 0.1) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    $header-shdw: rgba(9, 30, 66, 0.25) 0px 1px 1px, 
-    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+$cards-shdw: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+rgba(0, 0, 0, 0.1) 0px 7px 13px -3px,
+rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+$header-shdw: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;

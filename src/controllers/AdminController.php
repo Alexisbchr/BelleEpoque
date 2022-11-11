@@ -1,12 +1,16 @@
 <?php
+
 /**
  * This file contains all functions for the administration
  */
-class AdminController
+ 
+class AdminController extends AbstractController
 {
+	
 	/**
 	 * dashboard() is a function allowing the route and who verifies if user is log
 	 */
+	 
 	public function dashboard()
 	{
 		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
@@ -32,27 +36,54 @@ class AdminController
 	/**
 	 * addcours() is a function allowing the route and who verifies if user is log
 	 * and recept/post form from "/admin/addcours"
-	 */
+	*/
+
 
 	public function addcours()
 	{
+
 		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
 		{
-			require_once './src/managers/CoursManager.php';
-			if (isset($_POST['titre']) && isset($_POST['compte']) && isset($_POST['mur']) && isset($_POST['niveau']) && isset($_POST['choregraphe']) && isset($_POST['musique']))
+			// on vérifie que le formulaire est envoyé et que les champs sont remplis
+			if (
+
+				isset($_POST['titre']) && !empty($_POST['titre'])
+				&& isset($_POST['compte']) && !empty($_POST['compte'])
+				&& isset($_POST['mur']) && !empty($_POST['mur'])
+				&& isset($_POST['niveau']) && !empty($_POST['niveau'])
+				&& isset($_POST['choregraphe']) && !empty($_POST['choregraphe'])
+				&& isset($_POST['musique']) && !empty($_POST['musique'])
+				&& isset($_POST['lien']) && !empty($_POST['lien'])
+				&& isset($_POST['pdf']) && !empty($_POST['pdf'])
+
+			)
 			{
+				$titre = $this->clean_input($_POST["titre"]);
+				$inputCompte = $this->clean_input($_POST["compte"]);
+				$compte = intval($inputCompte);
+				$inputMur = $this->clean_input($_POST["mur"]);
+				$mur = intval($inputMur);
+				$inputNiveau = $this->clean_input($_POST["niveau"]);
+				$niveau = intval($inputNiveau);
+				$choregraphe = $this->clean_input($_POST["choregraphe"]);
+				$musique = $this->clean_input($_POST["musique"]);
+				$lien = $this->clean_input($_POST["lien"]);
+				$pdf = $this->clean_input($_POST["pdf"]);
+
+				require_once './src/managers/CoursManager.php';
 				$coursManager = new CoursManager();
-				$cours = $coursManager->insertCours($_POST['titre'], $_POST['compte'], $_POST['mur'], $_POST['niveau'], $_POST['choregraphe'], $_POST['musique']);
-				include './src/includes/_success.phtml';
+				$cours = $coursManager->insertCours($titre, $compte, $mur, $niveau, $choregraphe, $musique, $lien, $pdf);
+				header('Location: /BelleEpoque/admin/allcours');
+				exit();
 			}
 			$page = "addcours";
 			$pageName = "Ajouter un cours";
-			require_once './src/templates/admin/admlayout.phtml';
+			require './src/templates/admin/admlayout.phtml';
 		}
 		else
 		{
 			header('Location: login');
-			exit;
+			exit();
 		}
 	}
 
@@ -75,7 +106,7 @@ class AdminController
 		else
 		{
 			header('Location: login');
-			exit;
+			exit();
 		}
 	}
 
@@ -86,17 +117,45 @@ class AdminController
 
 	public function editcours(int $id)
 	{
+
 		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
 		{
 			require_once './src/managers/CoursManager.php';
 			$coursManager = new CoursManager;
 			$cours = $coursManager->getCoursById($id);
-			if (isset($_POST['id']) && isset($_POST['title']) && isset($_POST['compte']) && isset($_POST['mur']) && isset($_POST['niveau']) && isset($_POST['choregraphe']) && isset($_POST['musique']) && isset($_POST['lien']) && isset($_POST['pdf']))
-			{
+
+			if (
+
+				isset($_POST['titre']) && !empty($_POST['titre'])
+				&& isset($_POST['compte']) && !empty($_POST['compte'])
+				&& isset($_POST['mur']) && !empty($_POST['mur'])
+				&& isset($_POST['niveau']) && !empty($_POST['niveau'])
+				&& isset($_POST['choregraphe']) && !empty($_POST['choregraphe'])
+				&& isset($_POST['musique']) && !empty($_POST['musique'])
+				&& isset($_POST['lien']) && !empty($_POST['lien'])
+				&& isset($_POST['pdf']) && !empty($_POST['pdf'])
+
+			){
+
+				$titre = $this->clean_input($_POST["titre"]);
+				$inputCompte = $this->clean_input($_POST["compte"]);
+				$compte = intval($inputCompte);
+				$inputMur = $this->clean_input($_POST["mur"]);
+				$mur = intval($inputMur);
+				$inputNiveau = $this->clean_input($_POST["niveau"]);
+				$niveau = intval($inputNiveau);
+				$choregraphe = $this->clean_input($_POST["choregraphe"]);
+				$musique = $this->clean_input($_POST["musique"]);
+				$lien = $this->clean_input($_POST["lien"]);
+				$pdf = $this->clean_input($_POST["pdf"]);
+
+
 				$coursManager = new CoursManager();
-				$cours = $coursManager->editCours($_POST['title'], $_POST['compte'], $_POST['mur'], $_POST['niveau'], $_POST['choregraphe'], $_POST['musique'], $_POST['id'], $_POST['lien'], $_POST['pdf']);
-				header('Location: /BelleEpoque/admin');
+				$cours = $coursManager->editCours($id, $titre, $compte, $mur, $niveau, $choregraphe, $musique, $lien, $pdf);
+				header('Location: /BelleEpoque/admin/allcours');
+				exit;
 			}
+
 			$page = "editcours";
 			$pageName = "Ajouter un cours";
 			require_once './src/templates/admin/admlayout.phtml';
@@ -104,10 +163,33 @@ class AdminController
 		else
 		{
 			header('Location: login');
+			exit();
+		}
+	}
+	/**
+	 * deletecours() is a function allowing the route and who verifies if user is log
+	 * and who can delete a lesson
+	 */
+
+	public function deletecours(int $id)
+	{
+		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
+		{
+			$page = "deletecours";
+			$pageName = "Supprimer un cours";
+			require_once './src/managers/CoursManager.php';
+			$coursManager = new CoursManager();
+			$cours = $coursManager->deleteCoursById($id);
+			require_once './src/templates/admin/admlayout.phtml';
+			header('Location: /BelleEpoque/admin/allcours');
+			exit;
+		}
+		else
+		{
+			header('Location: login');
 			exit;
 		}
 	}
-
 	/**
 	 * deletecours() is a function allowing the route and who verifies if user is log
 	 * and who can delete a lesson
@@ -236,12 +318,19 @@ class AdminController
 
 	public function galerie()
 	{
-		$page = "galerie";
-		$pageName = "Galerie de photo";
-		require_once './src/managers/ImagesManager.php';
-		$imagesManager = new ImagesManager;
-		$images = $imagesManager->getDataImages();
-		require_once "./src/templates/admin/admlayout.phtml";
+		if(isset($_SESSION['user']) && $_SESSION['user'] !== null){
+      $page = "galerie";
+			$pageName = "Galerie de photo";
+			require_once './src/managers/ImagesManager.php';
+			$imagesManager = new ImagesManager;
+			$images = $imagesManager->getDataImages();
+			require_once "./src/templates/admin/admlayout.phtml";
+    }
+    else{
+     header('Location: login');
+     exit;
+    }
+
 
 	}
 	public function editImage(int $id)
@@ -269,6 +358,9 @@ class AdminController
 				$id = $_POST['id'];
 				$imagesManager = new ImagesManager();
 				$images = $imagesManager->editimage($id, $title, $lien);
+
+		    	header ('Location: /BelleEpoque/admin/galerie');
+
 			}
 
 			require_once './src/templates/admin/admlayout.phtml';
@@ -284,12 +376,16 @@ class AdminController
 	{
 		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
 		{
+
 			$page = "singleimage";
 			$pageName = "Consulter un cours";
 			require_once './src/managers/ImagesManager.php';
+
 			$imagesManager = new ImagesManager;
 			$image = $imagesManager->getImageById($id);
 			require_once './src/templates/admin/admlayout.phtml';
+
+			header ('Location: /BelleEpoque/admin/galerie');
 		}
 		else
 		{
@@ -301,12 +397,15 @@ class AdminController
 	{
 		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
 		{
-			$page = "deletecours";
+
+			$page = "deleteimage";
 			$pageName = "Supprimer un cours";
 			require_once './src/managers/ImagesManager.php';
 			$imagesManager = new ImagesManager;
 			$images = $imagesManager->deleteImage($id);
 			require_once './src/templates/admin/admlayout.phtml';
+
+			header ('Location: /BelleEpoque/admin/galerie');
 		}
 		else
 		{

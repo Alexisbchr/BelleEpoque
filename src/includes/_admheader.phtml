@@ -1,18 +1,23 @@
 <header class="header">
   <div class="header__logo">
-    <a href="/BelleEpoque/admin"class="logo">Belle Époque</a>
+    <a href="/BelleEpoque/" class="logo">Belle Époque</a>
   </div>
-  <div class="openMenu"><i class="fa fa-bars"></i></div>
-  <div class="header__menu">
-    <ul class="header__menu--list">
+  <nav class="header__menu">
+    <ul class="header__menu--list" id="modalBurger">
       <li class="header__menu--items">
-        <a href="/BelleEpoque/admin">Dashboard</a>
+        <a href="/BelleEpoque/">Accueil</a>
       </li>
       <li class="header__menu--items">
-        <a href="/BelleEpoque/allcours">Les cours</a>
+      	 <a href="/BelleEpoque/admin">Dashboard</a>
       </li>
       <li class="header__menu--items">
-        <a href="/BelleEpoque/galerie">Galerie photo</a>
+      	<a href="/BelleEpoque/admin/allcours">Les cours</a>
+      </li>
+      <li class="header__menu--items">
+
+        <a href="/BelleEpoque/admin/galerie">Galerie photo</a>
+      </li>
     </ul>
-  </div>
+    <button class="burger button-3" id="openBurger"><i class="fa fa-bars"></i></button>
+  </nav>
 </header>

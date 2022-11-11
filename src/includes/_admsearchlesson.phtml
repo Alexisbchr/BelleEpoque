@@ -1,0 +1,30 @@
+<?php
+  foreach($coursFind as $cours):
+?>
+<div class="cards">
+  <div class="cards__top">
+    <h3><?= $cours['title'];?></h3>
+  </div>
+  <div class="cards__center">
+    <ul class="cards__ul">
+      <li class="cards__li"><span>Compte: </span>
+      <span class="li__result"><?= $cours['compte'];?></li>
+      <li class="cards__li"><span>Mur: </span>
+      <span class="li__result"><?= $cours['mur'];?></span></li>
+      <li class="cards__li"><span>Niveau: </span>
+      <span class="li__result"><?= $cours['niveau'];?></li>
+      <li class="cards__li"><span>Chorégraphe: </span>
+      <span class="li__result"><?= $cours['choregraphe'];?></span></li>
+      <li class="cards__li"><span>Musique: </span>
+      <span class="li__result"><?= $cours['musique'];?></span></li>
+    </ul>
+  </div>
+  <div class="cards__bottom">
+    <button class="button-4" role="button">
+        <span class="text">
+        <a href="/BelleEpoque/singlecours/<?= $cours['id'] ?>">Voir le cours</a>
+        </span>
+    </button>
+  </div>
+</div>
+<?php endforeach; ?>

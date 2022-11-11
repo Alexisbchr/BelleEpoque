@@ -1,8 +1,14 @@
+<!--
+
+Ce formulaire utilise la fonction mail() de php qui n'est pas supportée par l'IDE
+
+-->
+
 <main class="container" id="aside">
   <section class="section--second">
     <h2>Contactez-nous!</h2>
-    <div class="section__cards">
-      <div class="cards">
+    <article class="section__cards">
+      <article class="cards">
         <div class="cards-center">
           <form action="/BelleEpoque/contact" method="post">
                <fieldset>
@@ -21,7 +27,7 @@
                   <div class="field">
                      <label for="message">Votre message</label>
                      <div class="value">
-                      <textarea name="message" id="query" required ></textarea> 
+                      <textarea name="message" id="query" required ></textarea>
                      </div>
                   </div>
                </fieldset>
@@ -30,14 +36,9 @@
                </div>
             </form>
         </div>
-      </div>
-    </div>
+      </article>
+    </article>
     <?php require './src/includes/_navsection.phtml'; ?>
   </section>
   <?php require './src/includes/_aside.phtml'; ?>
 </main>
-<script>
- function onSubmit(token) {
-   document.getElementById("demo-form").submit();
- }
-</script>

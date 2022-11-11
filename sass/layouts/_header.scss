@@ -1,10 +1,11 @@
-@media (min-width: 993px){
-  .header{
+@media (min-width: 993px) {
+
+  .header {
     width: 100%;
     height: 8vh;
     padding: 0 5vw;
     position: fixed;
-    z-index:999999;
+    z-index: 999999;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -12,28 +13,31 @@
     color: #F2F2F2;
     background-color: $header-bgc;
     box-shadow: $header-shdw;
-      &__menu--list{
-        
-        display: flex;
-        list-style: none;
-      }
-      &__menu--items{
-        
-        &>a{
-        margin-right: 1.5em;
-        font-size: 1em;
-        font-family: $body-fnt;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: $white2;
-        text-decoration: none;
-        }
-    }
   }
-  header>.openMenu{
-      display:none;
-    }
-  
+
+  .header__menu--list {
+    display: flex;
+    list-style: none;
+  }
+
+  .header__menu--items>a {
+    margin-right: 1em;
+    font-size: 1em;
+    font-family: $body-fnt;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $white2;
+    text-decoration: none;
+  }
+
+  header>nav {
+    display: flex;
+  }
+
+  nav>button {
+    overflow: hidden;
+  }
+  #openBurger {
+    display: none;
+  }
 }
-
-

@@ -1,6 +1,6 @@
 <?php
 
-class PageController
+class PageController extends AbstractManager
 {
   public function association(){
     $page = "association";
