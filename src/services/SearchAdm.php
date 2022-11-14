@@ -6,7 +6,7 @@
 	$data = json_decode($content, true);
 	$search = "%" . $data['textToFind'] . "%";
 	// Se connecter à la bdd
-	$bdd = new PDO('mysql:host=db.3wa.io;port=3306;dbname=beucheralexis_belle_epoque',
+	$bdd = new PDO('mysql:host=db.3wa.io;port=3306;dbname=beucheralexis_belle_epoque;charset=utf8',
 				'beucheralexis',
 				'6e8483129fd777c045a2009608fa54d9');
 	$sth = $bdd->prepare('SELECT * FROM cours WHERE title LIKE :find
@@ -15,4 +15,4 @@
 			$sth->execute();
 			$coursFind = $sth->fetchAll(PDO::FETCH_ASSOC);
 			$numberOfCours = count($coursFind);
-			include './includes/_admsearchlesson.phtml';
+			include '../includes/_admsearchlesson.phtml';

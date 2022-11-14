@@ -15,4 +15,5 @@
 			$sth->execute();
 			$coursFind = $sth->fetchAll(PDO::FETCH_ASSOC);
 			$numberOfCours = count($coursFind);
+			var_dump()
 			include '../includes/_searchlesson.phtml';

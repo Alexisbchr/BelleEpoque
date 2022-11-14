@@ -1,11 +1,11 @@
 'use strict';
-let input = document.querySelector('#search');
+let input = document.querySelector('#searchadm');
 
 input.addEventListener('keyup', () => {
 
-	let textFind = document.querySelector('#search').value;
+	let textFind = document.querySelector('#searchadm').value;
 	console.log(textFind);
-	let req = new Request('./src/services/SearchAdm.php', {
+	let req = new Request('../src/services/SearchAdm.php', {
 		method: 'POST',
 		body: JSON.stringify({ textToFind: textFind })
 	});
