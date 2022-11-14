@@ -12,18 +12,22 @@ class ImagesManager extends AbstractManager
 	{
 		if (isset($_POST['addimage']))
 		{
-				$dataImage = ['img_lien' => 'images/' . $_FILES['image']['name'],
-				'img_file' => $_FILES['image']['tmp_name']];
+			$dataImage = ['img_lien' => 'images/' . $_FILES['image']['name'],
+			'img_file' => $_FILES['image']['tmp_name']];
 
-				$data = ['title' => htmlspecialchars($_POST['title']),
-				'img_lien' => $dataImage['img_lien'],
-				'timestamp' => htmlspecialchars($_POST['timestamp'])];
+			$data = ['title' => htmlspecialchars($_POST['title']),
+			'img_lien' => $dataImage['img_lien'],
+			'timestamp' => htmlspecialchars($_POST['timestamp'])];
 
-				move_uploaded_file($dataImage['img_file'], $dataImage['img_lien']);
+			move_uploaded_file($dataImage['img_file'], $dataImage['img_lien']);
 
-				$db = $this->db;
-				$query = $db->prepare('INSERT INTO images (title, lien, timestamp) VALUES (:title, :img_lien, :timestamp)');
-				$query->execute($data);
+			$db = $this->db;
+			$query = $db->prepare('INSERT INTO images (title, lien, timestamp) VALUES (:title, :img_lien, :timestamp)');
+			$query->execute($data);
+
+  			header ('Location: /BelleEpoque/admin/galerie');
+  			exit();
+
 		}
 	}
 	public function getDataImages()
@@ -33,7 +37,6 @@ class ImagesManager extends AbstractManager
 			$query->execute();
 			$images = $query->fetchAll(PDO::FETCH_ASSOC);
 			return $images;
-			var_dump($images);
 	}
 	public function getImageById(int $id) : Images
 	{
@@ -44,6 +47,7 @@ class ImagesManager extends AbstractManager
 			$image = $query->fetchAll(PDO::FETCH_ASSOC);
 			$images = new Images($image[0]['id'], $image[0]['title'], $image[0]['lien'], $image[0]['timestamp']);
 			return $images;
+
 
 	}
    private function generateFileName() : string
@@ -59,6 +63,8 @@ class ImagesManager extends AbstractManager
 			$query = $db->prepare('UPDATE images SET id=:id, title=:title, lien=:img_lien WHERE id=:id');
 			$parameters = ['id' => $id, 'title' => $title, 'img_lien' => $lien];
 			$query->execute($parameters);
+			header ('Location: /BelleEpoque/admin/galerie');
+			exit();
 	}
 	public function deleteimage(int $id)
 	{
@@ -68,7 +74,8 @@ class ImagesManager extends AbstractManager
 			'id' => $id
 		];
 		$query->execute($parameters);
-
+  	header ('Location: /BelleEpoque/admin/galerie');
+		exit();
 	}
 }
 

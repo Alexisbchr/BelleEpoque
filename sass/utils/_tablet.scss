@@ -37,6 +37,9 @@
     width: 100vw;
     height: 87vh;
   }
+  .header__menu--list.active-menu {
+    display: flex;
+  }
   .header__menu--items {
     margin-bottom: 1.3em;
   }

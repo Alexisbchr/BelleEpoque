@@ -1,7 +1,7 @@
-const openMenu = document.getElementById('openBurger');
+const burger = document.querySelector('.burger');
 const modalMenu = document.getElementById('modalBurger');
-console.log(openMenu);
-openMenu.addEventListener('click', () => {
-	console.log('click');
-	modalMenu.style.display = 'flex';
+
+burger.addEventListener('click', () => {
+	burger.classList.toggle('active');
+	modalMenu.classList.toggle('active-menu');
 });

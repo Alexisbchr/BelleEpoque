@@ -1,31 +1,31 @@
 <main class="container" id="aside">
-  <section class="section--second">
-    <h2>Recherche terminée!</h2>
-    <p>Voici l'ensemble des résultats de votre requête...</p>
-    <div class="section__cards">
-      <div class="cards">
-        <div class="cards__center">
-          <ul class="cards__ul">
-            <?php
-              if(!empty($coursByFirstLetter[$letter])){
-                for($i = 0, $max = count($coursByFirstLetter[$letter]); $i<$max; $i++){
-                  $id = $coursByFirstLetter[$letter][$i]['id'];
-              ?>
-                <li class="cards__li">
-                  <a href="/BelleEpoque/singlecours/<?= $id; ?>"><?= $coursByFirstLetter[$letter][$i]['title'];?></a>
-                </li>
-              <?php
-                }
-              }
-              else{
-                header('Location: /BelleEpoque/404');
-              }
-            ?> 
-          </ul> 
-        </div>
-      </div>
-    </div>
-    <?php require './src/includes/_navsection.phtml'; ?>
-  </section>
-  <?php require './src/includes/_aside.phtml';?>
+    <section class="section--second">
+        <h2>Recherche terminée!</h2>
+        <p>Voici l'ensemble des résultats de votre requête...</p>
+        <section class="section__cards">
+            <article class="cards">
+                <div class="cards__center">
+                    <ul class="cards__ul">
+                    <?php
+                        if(!empty($coursByFirstLetter[$letter])){
+                            for($i = 0, $max = count($coursByFirstLetter[$letter]); $i<$max; $i++){
+                                 $id = $coursByFirstLetter[$letter][$i]['id'];
+                    ?>
+                        <li class="cards__li">
+                            <a href="/BelleEpoque/singlecours/<?= $id; ?>"><?= $coursByFirstLetter[$letter][$i]['title'];?></a>
+                        </li>
+                    <?php
+                        }
+                    }
+                        else{
+                            header('Location: /BelleEpoque/404');
+                        }
+                    ?>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <?php require './src/includes/_navsection.phtml'; ?>
+    </section>
+    <?php require './src/includes/_aside.phtml';?>
 </main>

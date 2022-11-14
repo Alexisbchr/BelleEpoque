@@ -3,14 +3,14 @@
 /**
  * This file contains all functions for the administration
  */
- 
+
 class AdminController extends AbstractController
 {
-	
+
 	/**
 	 * dashboard() is a function allowing the route and who verifies if user is log
 	 */
-	 
+
 	public function dashboard()
 	{
 		if (isset($_SESSION['user']) && $_SESSION['user'] !== null)
@@ -21,7 +21,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}
@@ -82,7 +82,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit();
 		}
 	}
@@ -105,7 +105,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit();
 		}
 	}
@@ -162,7 +162,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit();
 		}
 	}
@@ -186,7 +186,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}
@@ -208,7 +208,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}
@@ -231,7 +231,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}
@@ -274,7 +274,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 
@@ -297,7 +297,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}
@@ -327,7 +327,7 @@ class AdminController extends AbstractController
 			require_once "./src/templates/admin/admlayout.phtml";
     }
     else{
-     header('Location: login');
+     header('Location: /BelleEpoque/login');
      exit;
     }
 
@@ -360,6 +360,7 @@ class AdminController extends AbstractController
 				$images = $imagesManager->editimage($id, $title, $lien);
 
 		    	header ('Location: /BelleEpoque/admin/galerie');
+		    	exit();
 
 			}
 
@@ -367,7 +368,7 @@ class AdminController extends AbstractController
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 
@@ -386,10 +387,11 @@ class AdminController extends AbstractController
 			require_once './src/templates/admin/admlayout.phtml';
 
 			header ('Location: /BelleEpoque/admin/galerie');
+			exit();
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}
@@ -406,10 +408,11 @@ class AdminController extends AbstractController
 			require_once './src/templates/admin/admlayout.phtml';
 
 			header ('Location: /BelleEpoque/admin/galerie');
+			exit();
 		}
 		else
 		{
-			header('Location: login');
+			header('Location: /BelleEpoque/login');
 			exit;
 		}
 	}

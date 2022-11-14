@@ -16,7 +16,7 @@ class ImagesController
         require_once "./src/templates/admin/admlayout.phtml";
       }
       else{
-       header('Location: login');
+       header('Location: /BelleEpoque/login');
        exit;
       }
     }

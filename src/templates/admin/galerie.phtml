@@ -1,12 +1,12 @@
 <main class="container" id="index">
   <section class="section--second">
     <h2>Galerie d'images</h2>
-    <div class="section__cards">
+    <section class="section__cards">
       <?php
         foreach($images as $image)
         {
       ?>
-      <div class="cards ">
+      <article class="cards ">
        <div class="cards__top">
           <h3><?= $image['title']; ?></h3>
        </div>
@@ -30,12 +30,12 @@
               </span>
           </button>
         </div>
-      </div>
+      </article>
 
       <?php
         }
       ?>
-    </div>
+    </section>
     <?php require './src/includes/_navsection.phtml'; ?>
   </section>
 </main>

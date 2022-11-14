@@ -17,6 +17,9 @@
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: $header-shdw;
   }
+  .header__menu--list.active-menu {
+    display: flex;
+  }
   .header__logo {
     width: 60%;
     display: flex;
